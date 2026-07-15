@@ -1,0 +1,164 @@
+{
+  "$schema": "./schema/colors.schema.json",
+  "meta": {
+    "name": "TACEDGE colour tokens",
+    "version": "1.0.0",
+    "note": "Source of truth for TACEDGE colour. Do not add colours. CMYK values are mathematical conversions: Indicative CMYK — verify with the selected printer and stock. No Pantone values are published until validated on press (see docs/decisions-required.md D3)."
+  },
+  "colors": {
+    "primary-dark": {
+      "value": "#112411", "rgb": [17, 36, 17], "hsl": [120, 36, 10], "cmykIndicative": [53, 0, 53, 86],
+      "alias": "forest", "status": "approved",
+      "role": "Primary TACEDGE hero green. Dominant dark surface: headers, footers, dark sections, primary buttons, report covers.",
+      "on": ["cream", "card", "sage-tint", "tint"],
+      "textOn": ["cream", "card", "sage-tint", "pale-sage"],
+      "a11y": "Cream on primary-dark 14.97:1 (AAA). White on primary-dark 16.35:1 (AAA)."
+    },
+    "primary-dark-hover": {
+      "value": "#1A3219", "rgb": [26, 50, 25], "hsl": [118, 33, 15], "cmykIndicative": [48, 0, 50, 80],
+      "alias": "forest-2", "status": "approved",
+      "role": "Hover state for primary-dark buttons; secondary green for line icons on light grounds.",
+      "a11y": "Cream on hover 13.1:1 (AAA). As icon/text on card 13.87:1."
+    },
+    "contour-on-dark": {
+      "value": "#1B331A", "rgb": [27, 51, 26], "hsl": [118, 32, 15], "cmykIndicative": [47, 0, 49, 80],
+      "alias": "forest-line", "status": "approved",
+      "role": "Topographic contour linework on primary-dark surfaces only. Stroke 1.1px, opacity 0.45. Decorative — never carries information.",
+      "a11y": "Decorative only; below contrast thresholds by design."
+    },
+    "logo-forest": {
+      "value": "#2B4721", "rgb": [43, 71, 33], "hsl": [104, 37, 20], "cmykIndicative": [39, 0, 54, 72],
+      "status": "provisional",
+      "role": "PROVISIONAL — REQUIRES FINAL APPROVAL (D1). Green used inside logo artwork on light grounds and the app-icon tile. Never a UI, surface or text colour.",
+      "a11y": "9.49:1 on cream — the wordmark stays legible at minimum sizes."
+    },
+    "utility-sage": {
+      "value": "#6E7D5C", "rgb": [110, 125, 92], "hsl": [87, 15, 43], "cmykIndicative": [12, 0, 26, 51],
+      "alias": "olive", "status": "approved",
+      "role": "Working mid-tone. Secondary marks, muted accents, process arrows, checklist ticks.",
+      "a11y": "4.05:1 on cream, 4.42:1 on white — large text and icons only. Not for body text."
+    },
+    "sage-edge": {
+      "value": "#AEB89C", "rgb": [174, 184, 156], "hsl": [81, 16, 67], "cmykIndicative": [5, 0, 15, 28],
+      "alias": "olive-edge", "status": "approved",
+      "role": "Green hairline; selected edge; icon rings on tinted panels.",
+      "a11y": "Hairline/decorative. 7.89:1 against primary-dark when used as a ring on dark."
+    },
+    "pale-sage": {
+      "value": "#B2B594", "rgb": [178, 181, 148], "hsl": [65, 18, 65], "cmykIndicative": [2, 0, 18, 29],
+      "alias": "sage", "status": "approved",
+      "role": "Quiet mid surface. Utility labels on dark surfaces; the brandmark colour.",
+      "a11y": "7.73:1 on primary-dark (AA for any size, AAA for large)."
+    },
+    "sage-tint": {
+      "value": "#E6EBD9", "rgb": [230, 235, 217], "hsl": [77, 31, 89], "cmykIndicative": [2, 0, 8, 8],
+      "status": "approved",
+      "role": "Soft green fill: chips, tinted callout panels, icon containers, lead copy on dark surfaces.",
+      "a11y": "Ink on sage-tint 12.1:1 (AAA). 13.43:1 against primary-dark."
+    },
+    "warm-cream": {
+      "value": "#F7F5EC", "rgb": [247, 245, 236], "hsl": [49, 41, 95], "cmykIndicative": [0, 1, 4, 3],
+      "alias": "cream", "status": "approved",
+      "role": "Page background — the brand paper. Text and logo colour on primary-dark surfaces.",
+      "a11y": "14.97:1 against primary-dark (AAA)."
+    },
+    "card-surface": {
+      "value": "#FFFFFF", "rgb": [255, 255, 255], "hsl": [0, 0, 100], "cmykIndicative": [0, 0, 0, 0],
+      "alias": "card", "status": "approved",
+      "role": "Card and component surface on cream or tint pages.",
+      "a11y": "Ink on card 14.73:1 (AAA)."
+    },
+    "quiet-tint": {
+      "value": "#EFF1E4", "rgb": [239, 241, 228], "hsl": [69, 32, 92], "cmykIndicative": [1, 0, 5, 5],
+      "alias": "tint", "status": "approved",
+      "role": "Faint green-grey fill: quiet panels, alternating sections and table rows.",
+      "a11y": "Ink on quiet-tint 12.88:1 (AAA)."
+    },
+    "stage": {
+      "value": "#DDE3D2", "rgb": [221, 227, 210], "hsl": [81, 23, 86], "cmykIndicative": [3, 0, 7, 11],
+      "status": "approved",
+      "role": "Backdrop behind device frames and product imagery compositions only.",
+      "a11y": "Backdrop only — no text directly on stage."
+    },
+    "primary-text": {
+      "value": "#242A1F", "rgb": [36, 42, 31], "hsl": [93, 15, 14], "cmykIndicative": [14, 0, 26, 84],
+      "alias": "ink", "status": "approved",
+      "role": "Primary text on light surfaces. Also the monochrome logo ink.",
+      "a11y": "13.48:1 on cream, 14.73:1 on white (AAA)."
+    },
+    "secondary-text": {
+      "value": "#5B6253", "rgb": [91, 98, 83], "hsl": [88, 8, 35], "cmykIndicative": [7, 0, 15, 62],
+      "alias": "ink-60", "status": "approved",
+      "role": "Secondary and supporting text on light surfaces.",
+      "a11y": "5.8:1 on cream, 6.33:1 on white (AA all sizes)."
+    },
+    "muted-text": {
+      "value": "#646A5A", "rgb": [100, 106, 90], "hsl": [83, 8, 38], "cmykIndicative": [6, 0, 15, 58],
+      "alias": "ink-40", "status": "approved",
+      "role": "Utility text: captions, metadata, eyebrow labels. Corrected value — supersedes the stale #8A8F80 listed on the website styleguide page.",
+      "a11y": "5.13:1 on cream, 4.9:1 on quiet-tint, 4.6:1 on sage-tint — AA (≥4.5:1) on every approved light surface."
+    },
+    "border": {
+      "value": "#E7E2D6", "rgb": [231, 226, 214], "hsl": [42, 26, 87], "cmykIndicative": [0, 2, 7, 9],
+      "alias": "line", "status": "approved",
+      "role": "Standard 1px card and component border on light surfaces."
+    },
+    "border-strong": {
+      "value": "#D9D3C4", "rgb": [217, 211, 196], "hsl": [43, 22, 81], "cmykIndicative": [0, 3, 10, 15],
+      "alias": "line-2", "status": "approved",
+      "role": "Stronger border: secondary buttons, emphasised card edges."
+    },
+    "divider": {
+      "value": "#CBD2C9", "rgb": [203, 210, 201], "hsl": [107, 9, 81], "cmykIndicative": [3, 0, 4, 18],
+      "alias": "rule", "status": "approved",
+      "role": "Horizontal rules and step-marker connector lines."
+    },
+    "focus": {
+      "value": "#112411", "rgb": [17, 36, 17], "hsl": [120, 36, 10], "cmykIndicative": [53, 0, 53, 86],
+      "status": "approved",
+      "role": "Focus outline on light surfaces: 2px solid, 2px offset. On dark surfaces the focus outline switches to warm-cream.",
+      "a11y": "14.97:1 against cream; cream outline 14.97:1 against primary-dark."
+    },
+    "success": {
+      "value": "#112411", "rgb": [17, 36, 17], "hsl": [120, 36, 10], "cmykIndicative": [53, 0, 53, 86],
+      "status": "approved",
+      "role": "Terminal-positive state. TACEDGE uses forest-filled components for confirmed/complete — there is no separate bright green. Forest fill is reserved for terminal-positive states.",
+      "a11y": "Cream on forest 14.97:1."
+    },
+    "warning": {
+      "value": "#B07D2B", "rgb": [176, 125, 43], "hsl": [37, 61, 43], "cmykIndicative": [0, 29, 76, 31],
+      "alias": "ochre", "status": "approved",
+      "role": "Caution status: ageing, submitted-awaiting-review, variance. Product UI and faithful UI mocks only. Never decorative, never a marketing accent.",
+      "pair": "warning-tint #F5EBD4",
+      "a11y": "3.61:1 on white — large text, icons and badges only. Pair with primary-text for body copy on warning-tint (12.42:1)."
+    },
+    "warning-tint": {
+      "value": "#F5EBD4", "rgb": [245, 235, 212], "hsl": [42, 62, 90], "cmykIndicative": [0, 4, 13, 4],
+      "alias": "ochre-tint", "status": "approved",
+      "role": "Caution fill behind warning badges and rows."
+    },
+    "error": {
+      "value": "#9E3B2E", "rgb": [158, 59, 46], "hsl": [7, 55, 40], "cmykIndicative": [0, 63, 71, 38],
+      "alias": "brick", "status": "approved",
+      "role": "Alert status: issue, test-fail, incident, stale. Product UI and faithful UI mocks only. Never decorative.",
+      "pair": "error-tint #F3DDD6",
+      "a11y": "6.73:1 on white, 5.17:1 on error-tint, 6.16:1 on cream — AA at all sizes."
+    },
+    "error-tint": {
+      "value": "#F3DDD6", "rgb": [243, 221, 214], "hsl": [14, 55, 90], "cmykIndicative": [0, 9, 12, 5],
+      "alias": "brick-tint", "status": "approved",
+      "role": "Alert fill behind error badges and rows."
+    },
+    "information": {
+      "value": "#6E7D5C", "rgb": [110, 125, 92], "hsl": [87, 15, 43], "cmykIndicative": [12, 0, 26, 51],
+      "status": "approved",
+      "role": "Informational status shares utility-sage. TACEDGE has no blue: neutral information is carried by the green family and typography, not a new hue.",
+      "a11y": "Large text and icons only on light surfaces (4.05:1 on cream)."
+    }
+  },
+  "alpha": {
+    "cream-line": { "value": "rgba(247, 245, 236, 0.16)", "role": "Hairline on primary-dark surfaces" },
+    "sage-line": { "value": "rgba(178, 181, 148, 0.5)", "role": "Icon ring on primary-dark surfaces" },
+    "olive-line": { "value": "rgba(110, 125, 92, 0.28)", "role": "Hairline on sage-tint panels" }
+  }
+}

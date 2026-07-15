@@ -1,0 +1,15 @@
+{
+  "meta": { "name": "TACEDGE breakpoint tokens", "version": "1.0.0", "note": "Max-width breakpoints, as used across the website. Layouts simplify downward; content order is preserved." },
+  "breakpoints": {
+    "wide": "1080px",
+    "desktop": "980px",
+    "tablet": "880px",
+    "tablet-narrow": "720px",
+    "mobile": "640px",
+    "mobile-narrow": "420px"
+  },
+  "motion": {
+    "standard": "140ms ease",
+    "note": "Colour, border, shadow and 1px transforms only. Respect prefers-reduced-motion: all animation collapses to 0.01ms."
+  }
+}

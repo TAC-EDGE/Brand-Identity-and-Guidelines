@@ -1,0 +1,14 @@
+{
+  "meta": { "name": "TACEDGE elevation tokens", "version": "1.0.0" },
+  "shadows": {
+    "sm": "0 1px 2px rgba(27, 33, 23, 0.05)",
+    "md": "0 2px 10px rgba(27, 33, 23, 0.06)",
+    "lg": "0 8px 28px rgba(27, 33, 23, 0.10)",
+    "device": "0 18px 40px rgba(0, 0, 0, 0.32)"
+  },
+  "rules": [
+    "One soft shadow family, tinted with ink — never pure black except under device frames.",
+    "Hover lifts one pixel and deepens the shadow one step.",
+    "No glows, no glassmorphism, no layered drop shadows."
+  ]
+}

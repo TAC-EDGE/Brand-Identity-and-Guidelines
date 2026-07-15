@@ -1,0 +1,22 @@
+/* TACEDGE typography tokens — v1.0.0. Subset of tokens.css for type-only consumers.
+   Fonts are self-hosted per property (Play, Be Vietnam Pro, JetBrains Mono — SIL OFL 1.1). */
+:root {
+  --te-display: 'Play', system-ui, sans-serif;
+  --te-ui: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  --te-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --te-t-h1: clamp(52px, 6.3vw, 92px);
+  --te-t-h2: clamp(33px, 4vw, 48px);
+  --te-t-h3: clamp(24px, 2.5vw, 34px);
+  --te-t-card-title: 26px;
+  --te-t-lead: clamp(18px, 1.5vw, 21px);
+  --te-t-body: 18px;
+  --te-t-card-body: 16px;
+  --te-t-label: 13px;
+  --te-t-caption: 14px;
+  --te-track-label: 0.16em;
+
+  --te-fs-2xs: 10px; --te-fs-xs: 11px; --te-fs-sm: 12px; --te-fs-base: 14px;
+  --te-fs-md: 15px; --te-fs-lg: 18px; --te-fs-xl: 26px; --te-fs-2xl: 30px;
+  --te-fs-3xl: 44px; --te-fs-4xl: 48px;
+}

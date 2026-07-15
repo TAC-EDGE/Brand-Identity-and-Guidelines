@@ -1,0 +1,71 @@
+/* One-page A4 landscape style tile. */
+@page { size: A4 landscape; margin: 0; }
+
+.tile {
+  width: 297mm;
+  height: 210mm;
+  background: var(--te-cream);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media screen {
+  .tile { margin: 8mm auto; box-shadow: 0 4px 24px rgba(0,0,0,.25); }
+}
+
+.tile__head {
+  background: var(--te-forest);
+  position: relative;
+  overflow: hidden;
+  padding: 7mm 10mm;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10mm;
+  align-items: center;
+}
+
+.tile__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3mm;
+  padding: 5mm 10mm;
+  align-content: stretch;
+}
+
+.tile__cell {
+  background: var(--te-card);
+  border: 0.25mm solid var(--te-line);
+  border-radius: 3mm;
+  padding: 3.5mm 4mm;
+  min-width: 0;
+}
+
+.tile__label {
+  display: block;
+  font-family: var(--te-mono);
+  font-size: 6pt;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--te-ink-40);
+  margin-bottom: 2mm;
+}
+
+.tile__note {
+  font-size: 5.8pt;
+  line-height: 1.5;
+  color: var(--te-ink-40);
+  margin-top: 2mm;
+}
+
+.tile__foot {
+  border-top: 0.25mm solid var(--te-line);
+  padding: 3mm 10mm 4mm;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--te-mono);
+  font-size: 6pt;
+  letter-spacing: .06em;
+  color: var(--te-ink-40);
+}

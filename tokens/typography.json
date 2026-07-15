@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "TACEDGE typography tokens",
+    "version": "1.0.0",
+    "note": "Fonts are not distributed with the asset library. Sources and licences: Play (Jonas Hecksher, Google Fonts, SIL OFL 1.1), Be Vietnam Pro (Vietanh Nguyen et al., Google Fonts, SIL OFL 1.1), JetBrains Mono (JetBrains, Google Fonts, SIL OFL 1.1). Self-host woff2 in each property; do not load from a CDN."
+  },
+  "families": {
+    "display": {
+      "family": "Play",
+      "weights": [400, 700],
+      "stack": "'Play', system-ui, sans-serif",
+      "use": "Headlines, card titles, numbered workflow markers, large numerals. Digital and print display."
+    },
+    "ui": {
+      "family": "Be Vietnam Pro",
+      "weights": [400, 500, 600, 700],
+      "stack": "'Be Vietnam Pro', system-ui, -apple-system, sans-serif",
+      "use": "Body copy, interface text, buttons, forms. Digital and print body."
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [400, 500, 700],
+      "stack": "'JetBrains Mono', ui-monospace, SFMono-Regular, monospace",
+      "use": "Utility labels, eyebrows, chips, reference numbers, data readouts. Use sparingly — restrained monospace is a signature, not a body style."
+    }
+  },
+  "roles": {
+    "hero-h1":      { "family": "display", "weight": 700, "size": "clamp(52px, 6.3vw, 92px)", "lineHeight": 1.05, "letterSpacing": "0.005em", "case": "title", "use": "The brand promise and page-level hero statements. One per page.", "printMin": "36pt" },
+    "section-h2":   { "family": "display", "weight": 700, "size": "clamp(33px, 4vw, 48px)", "lineHeight": 1.08, "letterSpacing": "0.01em", "case": "sentence", "use": "Section headings.", "printMin": "20pt" },
+    "callout-h3":   { "family": "display", "weight": 700, "size": "clamp(24px, 2.5vw, 34px)", "lineHeight": 1.22, "letterSpacing": "0.01em", "case": "sentence", "use": "Callouts and aside statements.", "printMin": "14pt" },
+    "card-title":   { "family": "display", "weight": 700, "size": "26px", "lineHeight": 1.2, "letterSpacing": "0.01em", "case": "sentence", "use": "Card and phase titles.", "printMin": "12pt" },
+    "lead":         { "family": "ui", "weight": 400, "size": "clamp(18px, 1.5vw, 21px)", "lineHeight": 1.6, "letterSpacing": "0", "case": "sentence", "use": "Lead copy under headings. Max 62ch.", "printMin": "11pt" },
+    "body":         { "family": "ui", "weight": 400, "size": "18px", "lineHeight": 1.6, "letterSpacing": "0", "case": "sentence", "use": "Body copy. Max 62ch.", "printMin": "9.5pt" },
+    "card-body":    { "family": "ui", "weight": 400, "size": "16px", "lineHeight": 1.6, "letterSpacing": "0", "case": "sentence", "use": "Copy inside cards.", "printMin": "9pt" },
+    "utility-label":{ "family": "mono", "weight": 500, "size": "13px", "lineHeight": 1.5, "letterSpacing": "0.16em", "case": "uppercase", "use": "Eyebrows and utility labels. Muted-text on light, pale-sage on dark. Never for sentences.", "printMin": "7pt" },
+    "caption":      { "family": "ui", "weight": 400, "size": "14px", "lineHeight": 1.5, "letterSpacing": "0", "case": "sentence", "use": "Image captions and metadata.", "printMin": "8pt" },
+    "footer":       { "family": "ui", "weight": 400, "size": "14px", "lineHeight": 1.6, "letterSpacing": "0", "case": "sentence", "use": "Footer and legal copy.", "printMin": "7.5pt" },
+    "interface-label": { "family": "ui", "weight": 600, "size": "15px", "lineHeight": 1.45, "letterSpacing": "0", "case": "sentence", "use": "Buttons, form labels, navigation.", "printMin": "9pt" },
+    "numerical-data": { "family": "mono", "weight": 500, "size": "15px", "lineHeight": 1.45, "letterSpacing": "0.02em", "case": "as-entered", "use": "Measurements, IDs, coordinates, test values. Tabular figures.", "printMin": "8pt" }
+  },
+  "scale": { "2xs": 10, "xs": 11, "sm": 12, "base": 14, "md": 15, "lg": 18, "xl": 26, "2xl": 30, "3xl": 44, "4xl": 48 },
+  "rules": [
+    "Do not overuse all caps: uppercase is reserved for the utility-label role and short chips.",
+    "Headlines are decisive and short; supporting copy is concise. Use the fewest words required.",
+    "Monospace is a utility voice, never a body voice.",
+    "NZ spelling. No em dashes."
+  ]
+}

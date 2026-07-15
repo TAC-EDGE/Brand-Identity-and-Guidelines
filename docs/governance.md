@@ -1,0 +1,72 @@
+# TACEDGE brand governance
+
+How the brand system is owned, changed and consumed. This document governs everything in this repository.
+
+## Authority
+
+```
+TACEDGE Brand System (this repository)
+  → Website (tacedge.co.nz)
+  → Product interfaces (TACEDGE platform / V2)
+  → Documents and physical applications
+```
+
+Downstream properties consume the system — tokens, assets, rules — and never define it. Where an implementation disagrees with this repository, the implementation is wrong or a governed change is required; a disagreement is never left silent.
+
+## Who approves changes
+
+| Change | Approver |
+|---|---|
+| Logo, palette, promise, terminology, personality | Both founders (Mike Coom, Dan McPherson) |
+| New guideline sections, applications, assets | One founder |
+| Corrections (typos, broken links, contrast fixes) | Maintainer, recorded in the changelog |
+
+There are no exceptions for "small" identity changes. A hex value is an identity change.
+
+## How assets become approved
+
+1. The asset is produced from master artwork (never redrawn) or captured/photographed per the imagery rules.
+2. It enters `assets/` with a manifest row marked **provisional**, referencing an open decision in `docs/decisions-required.md` if one applies.
+3. A founder signs it off.
+4. In one change: the manifest row flips to **approved**, the changelog records it, and any affected guideline page and the PDF are updated and re-exported.
+
+Assets that fail review are removed, not left lying around.
+
+## Version numbering
+
+Semantic versioning, displayed identically on the site header, PDF cover and changelog:
+
+- **Major** — changes to the visual identity itself: logo artwork, palette values, the promise, typography families.
+- **Minor** — new sections, assets, applications or tokens that extend the system without altering it.
+- **Patch** — corrections and clarifications.
+
+## Deprecation
+
+Superseded assets and rules leave the library and the guidelines in the same change that introduces their replacement, with a changelog entry naming what replaced them. Already deprecated: the Generation 1 implementation (forest `#2b4721` as UI colour, cream `#fcf2e8`, glassmorphism, Inter, mixed-case "TacEdge", PNG-only lockups) — documented in `docs/brand-audit.md`.
+
+Deprecated assets must not be re-introduced from downstream repositories; the audit records where they still linger (decision D5).
+
+## Change control
+
+- Every change lands through a reviewed commit on a branch; `npm run typecheck` and `npm test` must pass.
+- Content changes require re-exporting the PDF and style tile before merge, so the site and PDF never disagree.
+- Open questions are not blockers: they are recorded in `docs/decisions-required.md` and flagged **PROVISIONAL — REQUIRES FINAL APPROVAL** wherever they surface.
+
+## How external contractors use the system
+
+1. Brief with the **style tile** (`exports/TACEDGE_Style_Tile_v1.0.pdf`).
+2. Contract with the **PDF edition** — it is the binding specification.
+3. Source artwork only from `assets/` (or the Downloads section of the site), at specified sizes and clear space.
+4. Treat CMYK values as indicative; verify on stock with the printer before production (decision D3).
+5. Fonts are obtained from Google Fonts under the SIL OFL 1.1 — this repository does not distribute font files.
+6. Anything not covered is a question to info@tacedge.co.nz, not a licence to improvise.
+
+## Font sources and licences
+
+| Family | Designer / foundry | Source | Licence |
+|---|---|---|---|
+| Play | Jonas Hecksher / Playtype | fonts.google.com/specimen/Play | SIL OFL 1.1 |
+| Be Vietnam Pro | Vietanh Nguyen et al. | fonts.google.com/specimen/Be+Vietnam+Pro | SIL OFL 1.1 |
+| JetBrains Mono | JetBrains | fonts.google.com/specimen/JetBrains+Mono | SIL OFL 1.1 |
+
+The woff2 copies under `src/fonts/` exist solely to render the guidelines site and embed in the PDF, as the OFL permits. They are excluded from the asset library and must not be offered as downloads.

@@ -1,0 +1,30 @@
+/* TACEDGE colour tokens — v1.0.0. Subset of tokens.css for colour-only consumers. */
+:root {
+  --te-forest: #112411;
+  --te-forest-hover: #1A3219;
+  --te-forest-line: #1B331A;
+  --te-logo-forest: #2B4721; /* logo artwork only — PROVISIONAL (D1) */
+  --te-olive: #6E7D5C;
+  --te-olive-edge: #AEB89C;
+  --te-sage: #B2B594;
+  --te-sage-tint: #E6EBD9;
+  --te-cream: #F7F5EC;
+  --te-card: #FFFFFF;
+  --te-tint: #EFF1E4;
+  --te-stage: #DDE3D2;
+  --te-ink: #242A1F;
+  --te-ink-60: #5B6253;
+  --te-ink-40: #646A5A;
+  --te-rule: #CBD2C9;
+  --te-line: #E7E2D6;
+  --te-line-2: #D9D3C4;
+  --te-cream-line: rgba(247, 245, 236, 0.16);
+  --te-sage-line: rgba(178, 181, 148, 0.5);
+  --te-olive-line: rgba(110, 125, 92, 0.28);
+  --te-ochre: #B07D2B;
+  --te-ochre-tint: #F5EBD4;
+  --te-brick: #9E3B2E;
+  --te-brick-tint: #F3DDD6;
+  --te-focus: #112411;
+  --te-focus-on-dark: #F7F5EC;
+}

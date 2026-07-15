@@ -1,0 +1,37 @@
+{
+  "meta": { "name": "TACEDGE spacing and layout tokens", "version": "1.0.0" },
+  "scale": {
+    "2xs": "4px", "xs": "8px", "sm": "12px", "md": "16px", "lg": "20px",
+    "xl": "24px", "2xl": "28px", "3xl": "36px", "4xl": "48px", "5xl": "56px"
+  },
+  "layout": {
+    "content-max": "1200px",
+    "gutter": "clamp(20px, 3.4vw, 32px)",
+    "section": "clamp(64px, 9vw, 120px)",
+    "section-tight": "clamp(56px, 7vw, 96px)"
+  },
+  "component": {
+    "card-padding": "24px",
+    "card-padding-lg": "28px",
+    "card-padding-compact": "18px 20px",
+    "panel-padding": "24px 28px",
+    "button-padding": "12px 26px",
+    "chip-padding": "6px 14px",
+    "icon-gap": "12px",
+    "inline-gap": "8px",
+    "stack-gap": "12px",
+    "grid-gap": "20px",
+    "grid-gap-lg": "24px"
+  },
+  "print": {
+    "a4-margins": "12mm 13mm",
+    "business-card-trim": "90mm x 55mm",
+    "business-card-bleed": "3mm",
+    "safe-zone": "5mm inside trim on all print items"
+  },
+  "rules": [
+    "Use the scale. One-off pixel values are not brand spacing.",
+    "Sections breathe: generous vertical rhythm is part of the calm register.",
+    "Body measure is capped at 62ch; supporting copy 42-48ch."
+  ]
+}

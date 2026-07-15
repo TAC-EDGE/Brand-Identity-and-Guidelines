@@ -1,0 +1,33 @@
+# TACEDGE Brand Identity & Guidelines — AI agent guide
+
+Read this before changing anything.
+
+## What this repository is
+
+**The authoritative TACEDGE brand repository.** Everything here — foundations, messaging, logo standards, colour, typography, tokens, assets, the guidelines site and the PDF — is the source of truth. The website, product interfaces, documents and physical applications follow this repository, never the other way around.
+
+The connected `tacedge/website` and Geotech V2 prototype repositories are **read-only references**. Do not modify them from work in this repository.
+
+## Hard brand rules (never break these)
+
+1. **TACEDGE is always uppercase** in written use. Never TacEdge, Tacedge, TechEdge or Tech Edge. Legal name: TACEDGE Limited where required.
+2. **Approved logo assets must never be redrawn**, traced, approximated, regenerated, recoloured or rebuilt with text/CSS. The SVGs in `assets/logos/` are the masters; the brandmark's softened geometry is part of the mark. PNG derivatives are regenerated with `npm run export:logo-pngs`, never edited.
+3. **"Shared Clarity." is the brand promise** — full stop included in hero treatments. Category line: "For ground-engineering delivery."
+4. **#112411 is the primary dark green** (Primary Dark / forest). #2B4721 is `logo-forest`, an artwork-only colour inside logo files, provisional under decision D1. Do not add colours; the palette in `tokens/colors.json` is closed.
+5. **Writing uses the fewest words required** to preserve full meaning. Plain, direct, operational. NZ spelling. No em dashes.
+6. **Unsupported claims are prohibited.** TACEDGE is in production on anchoring and drilling in New Zealand and Samoa — claim nothing beyond that. Banned words: revolutionary, cutting-edge, game-changing, best-in-class.
+7. **Real product imagery is preferred** — actual V2 prototype/product screens in the approved graphite device frames. Never invent interfaces or fake technical diagrams.
+8. **Status colours (ochre #B07D2B, brick #9E3B2E) are never decorative** — they carry product meaning only.
+9. **New assets must be marked `approved` or `provisional`** in `assets/asset-manifest.md`; provisional items reference a decision in `docs/decisions-required.md`.
+10. **The PDF and the site must stay aligned.** Both are built from `src/content/` and `tokens/`; after any content change, rebuild and re-export (`npm run build`, `npm run preview`, `npm run export:pdf`, `npm run export:style-tile`).
+11. **Release is the outcome of Confirm, never a fourth stage.** The workflow spine is Configure. Capture. Confirm.
+12. **Do not distribute font files** as assets. Play, Be Vietnam Pro and JetBrains Mono are Google Fonts (SIL OFL 1.1); `src/fonts/` exists only to render this site and PDF.
+
+## Working in this repo
+
+- `npm run dev` to develop; `npm run typecheck` and `npm test` must pass before committing. `npm test` verifies token-file consistency and WCAG AA contrast for approved combinations.
+- Guideline copy lives in `src/content/*.ts` and `tokens/*.json` — never hard-code copy or values in `src/pages/` components.
+- Token changes touch four files together: the JSON source, `tokens.css`, the per-domain css/ts file, and `tokens.ts`. `npm test` enforces agreement.
+- Update `CHANGELOG.md` with every change; versioning rules are in `docs/governance.md`.
+- The Whakaari / White Island origin imagery is used factually and respectfully, origin context only, always captioned.
+- Founder contact details appear only in the Applications section and card artwork — do not spread them elsewhere.

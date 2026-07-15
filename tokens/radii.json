@@ -1,0 +1,26 @@
+{
+  "meta": { "name": "TACEDGE radius and border tokens", "version": "1.0.0" },
+  "radii": {
+    "sm": "10px",
+    "md": "12px",
+    "lg": "14px",
+    "xl": "20px",
+    "2xl": "24px",
+    "pill": "999px",
+    "card": "16px",
+    "image": "14px",
+    "panel": "20px",
+    "panel-lg": "24px",
+    "button": "12px"
+  },
+  "borders": {
+    "hairline": "1px",
+    "emphasis": "1.5px",
+    "divider": "1px",
+    "focus-outline": "2px solid, 2px offset"
+  },
+  "rules": [
+    "Soft and disciplined, not bubbly: radii never exceed 24px on panels or 34px on device frames.",
+    "Borders are hairlines. Weight, not thickness, comes from colour and spacing."
+  ]
+}

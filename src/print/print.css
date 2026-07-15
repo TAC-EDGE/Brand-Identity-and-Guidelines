@@ -1,0 +1,119 @@
+/* ============================================================
+   TACEDGE Brand Guidelines — A4 print edition.
+   Each .sheet is one A4 page. Rendered by Playwright to PDF.
+   ============================================================ */
+
+@import "../../tokens/tokens.css";
+
+@font-face { font-family: "Play"; src: url("../fonts/play-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Play"; src: url("../fonts/play-700.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-500.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-600.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-700.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/jetbrains-mono-500.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight: 700; }
+
+@page { size: A4; margin: 0; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: #8a8f85; /* screen preview only; invisible in print */
+  font-family: var(--te-ui);
+  color: var(--te-ink);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+h1, h2, h3, h4 { font-family: var(--te-display); font-weight: 700; letter-spacing: .01em; margin: 0; line-height: 1.12; }
+p { margin: 0; }
+img, svg { max-width: 100%; }
+
+.sheet {
+  width: 210mm;
+  height: 297mm;
+  background: var(--te-cream);
+  padding: 14mm 16mm 18mm;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+}
+@media screen {
+  .sheet { margin: 8mm auto; box-shadow: 0 4px 24px rgba(0,0,0,.25); }
+}
+.sheet--dark { background: var(--te-forest); color: var(--te-cream); }
+
+/* Running head + folio */
+.sheet__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--te-mono); font-size: 7.5pt; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--te-ink-40);
+  border-bottom: 1px solid var(--te-line); padding-bottom: 4mm; margin-bottom: 7mm;
+}
+.sheet--dark .sheet__head { color: var(--te-sage); border-color: var(--te-cream-line); }
+.sheet__foot {
+  position: absolute; left: 16mm; right: 16mm; bottom: 9mm;
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--te-mono); font-size: 7pt; letter-spacing: .1em;
+  color: var(--te-ink-40);
+}
+.sheet--dark .sheet__foot { color: var(--te-sage); }
+
+.sheet h2.chapter { font-size: 22pt; margin-bottom: 2mm; }
+.sheet .lead { color: var(--te-ink-60); font-size: 10.5pt; line-height: 1.55; max-width: 150mm; margin-bottom: 7mm; }
+.sheet--dark .lead { color: var(--te-sage-tint); }
+
+.sheet h3 { font-size: 12.5pt; margin: 6mm 0 2.5mm; }
+.sheet p, .sheet li { font-size: 9.5pt; line-height: 1.55; }
+.sheet .small { font-size: 8.5pt; }
+
+.k-eyebrow {
+  font-family: var(--te-mono); font-size: 7.5pt; font-weight: 500;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--te-ink-40);
+  display: block; margin-bottom: 2.5mm;
+}
+.sheet--dark .k-eyebrow { color: var(--te-sage); }
+
+.p-rules { list-style: none; margin: 0; padding: 0; }
+.p-rules li { padding: 2.2mm 0 2.2mm 6mm; border-top: 1px solid var(--te-line); color: var(--te-ink-60); position: relative; }
+.p-rules li::before { content: ""; position: absolute; left: 0; top: 4.4mm; width: 2.2mm; height: 2.2mm; border-radius: 0.6mm; background: var(--te-olive); }
+.p-rules strong { color: var(--te-ink); }
+
+.p-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; }
+.p-table th { text-align: left; font-family: var(--te-mono); font-size: 7pt; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--te-ink-40); padding: 1.6mm 3mm 1.6mm 0; border-bottom: 1px solid var(--te-rule); }
+.p-table td { padding: 1.8mm 3mm 1.8mm 0; border-bottom: 1px solid var(--te-line); vertical-align: top; color: var(--te-ink-60); line-height: 1.45; }
+.p-table td:first-child { color: var(--te-ink); font-weight: 600; }
+.p-table--mono td:first-child { font-family: var(--te-mono); font-weight: 500; font-size: 8pt; white-space: nowrap; }
+
+.p-card { background: var(--te-card); border: 1px solid var(--te-line); border-radius: 4mm; padding: 5mm; }
+.p-panel { background: var(--te-sage-tint); border: 1px solid var(--te-olive-line); border-radius: 5mm; padding: 5mm 6mm; }
+
+.p-grid { display: grid; gap: 4mm; }
+.p-grid--2 { grid-template-columns: 1fr 1fr; }
+.p-grid--3 { grid-template-columns: 1fr 1fr 1fr; }
+.p-grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.p-swatch { border: 1px solid var(--te-line); border-radius: 3mm; overflow: hidden; background: var(--te-card); }
+.p-swatch__field { height: 14mm; }
+.p-swatch__body { padding: 2.2mm 3mm 2.6mm; }
+.p-swatch__name { font-weight: 700; font-size: 8.5pt; }
+.p-swatch__vals { font-family: var(--te-mono); font-size: 6.8pt; color: var(--te-ink-60); line-height: 1.6; margin-top: 1mm; }
+
+.p-flag { background: var(--te-ochre-tint); border: 1px solid rgba(176,125,43,.35); border-radius: 3mm; padding: 3mm 4mm; font-size: 8.5pt; color: #6E4E19; margin-top: 4mm; }
+.p-flag b { font-family: var(--te-mono); font-size: 7pt; letter-spacing: .08em; text-transform: uppercase; color: var(--te-ochre); }
+
+.p-do, .p-dont { border: 1px solid var(--te-line); border-radius: 3mm; overflow: hidden; background: var(--te-card); }
+.p-do__stage { min-height: 20mm; display: flex; align-items: center; justify-content: center; padding: 4mm; }
+.p-do__cap { border-top: 1px solid var(--te-line); padding: 2mm 3mm; font-size: 7.8pt; color: var(--te-ink-60); }
+.p-do__cap b { font-family: var(--te-mono); font-size: 6.8pt; letter-spacing: .1em; text-transform: uppercase; }
+.p-do .p-do__cap b { color: var(--te-forest); }
+.p-dont .p-do__cap b { color: var(--te-brick); }
+
+.contour { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.contour path { fill: none; stroke: var(--te-forest-line); stroke-width: 1.1; opacity: .45; }

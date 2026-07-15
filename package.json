@@ -1,0 +1,31 @@
+{
+  "name": "tacedge-brand-guidelines",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TACEDGE Brand Identity & Guidelines — authoritative brand system, interactive guidelines site, design tokens and approved assets.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "export:pdf": "node scripts/export-pdf.mjs",
+    "export:style-tile": "node scripts/export-style-tile.mjs",
+    "export:logo-pngs": "node scripts/export-logo-pngs.mjs",
+    "screenshots": "node scripts/screenshots.mjs",
+    "test": "node scripts/check-tokens.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright-core": "^1.61.1",
+    "typescript": "5.9",
+    "vite": "^6.0.0"
+  }
+}

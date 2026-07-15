@@ -47,3 +47,11 @@ The production SVGs are adopted as the master assets. No design-tool source (AI/
 ## D8. Physical applications
 
 Vehicle (Land Rover concept), apparel and signage guidance in v1.0 is **conceptual specification only** — no supplier-ready artwork exists in the audited repos. **Decide:** which physical applications proceed to supplier-ready artwork, produced from the master SVGs with the print-tested colours from D3.
+
+## D9. Template ownership defaults
+
+v1.1 assigns every template `owner: Mike Coom`, `approver: TACEDGE founders` in `templates/manifest.json`. **Decide:** confirm or reassign per template.
+
+## D10. Template approval (v1.1)
+
+All eight v1.0 templates (presentation deck, meeting minutes, pilot proposal + summary, technical report, letterhead, legal visual template, one-page collateral, email signature) ship as **Provisional** pending founder review of the exported files. **Decide:** review each template's PDF example and flip its manifest status to `approved` (a one-line change per template).

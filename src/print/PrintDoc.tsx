@@ -661,6 +661,36 @@ export const sheets: SheetDef[] = [
       </>
     ),
   },
+  // 16–24 Templates
+  {
+    chapter: "16–24 · Templates", title: "The template system",
+    body: (
+      <>
+        <p className="lead" style={{ marginBottom: "5mm" }}>
+          Approved starting points for consistent TACEDGE communication. Use these templates rather
+          than creating documents from a blank file; each applies the approved typography, spacing,
+          colour, logo and information hierarchy. The interactive edition carries full usage
+          guidance, previews and downloads for every template.
+        </p>
+        <T head={["Template", "Format", "Use", "Status"]} rows={[
+          ["Presentation deck", "PPTX 16:9, 22 layouts", "Pitches, briefings, reviews, conferences", "Provisional (D10)"],
+          ["Meeting minutes", "DOCX", "Decisions and actions, never transcripts", "Provisional (D10)"],
+          ["Pilot proposal (+ summary)", "DOCX", "A narrow, jointly defined validation", "Provisional (D10)"],
+          ["Technical / pilot report", "DOCX", "Findings labelled fact, feedback, inference, recommendation", "Provisional (D10)"],
+          ["Letterhead", "DOCX", "Formal correspondence, printer-safe", "Provisional (D10)"],
+          ["Legal document", "DOCX", "Formatting only; never replaces legal review", "Provisional (D10)"],
+          ["One-page collateral", "HTML + PDF", "Leave-behinds with word-count limits and QR rules", "Provisional (D10)"],
+          ["Email signature", "HTML + TXT", "Five lines of contact information", "Provisional (D10)"],
+        ]} />
+        <Rules items={[
+          <><strong>The exported files are the product.</strong> Previews are rendered from the actual editable files. Sources are masters; PDFs and previews are regenerated, never edited.</>,
+          <>Filename convention: <strong>TACEDGE_[Template_Name]_v[1.0].[ext]</strong>. Customer copies add [Customer]_[YYYY-MM-DD] and live outside the brand repository.</>,
+          <>Versions, status and owners live in templates/manifest.json. Only Approved templates are primary downloads.</>,
+          <>Fonts are referenced by name, never distributed: install Play, Be Vietnam Pro and JetBrains Mono from Google Fonts; office files fall back to Arial and Consolas.</>,
+        ]} />
+      </>
+    ),
+  },
   // 14 Downloads
   {
     chapter: "14 · Downloads", title: "Assets and design tokens",
@@ -755,8 +785,8 @@ export default function PrintDoc() {
           </tbody>
         </table>
         <p className="small" style={{ marginTop: "6mm", color: "var(--te-ink-40)" }}>
-          Sections 01 (Overview) of the interactive edition corresponds to this contents page. Open
-          decisions are marked <strong>PROVISIONAL</strong> and catalogued in docs/decisions-required.md (D1 to D8).
+          Section 01 (Overview) of the interactive edition corresponds to this contents page. Open
+          decisions are marked <strong>PROVISIONAL</strong> and catalogued in docs/decisions-required.md (D1 to D10).
         </p>
         <div className="sheet__foot"><span>TACEDGE · Brand Guidelines v{VERSION}</span><span>2 / {total}</span></div>
       </section>

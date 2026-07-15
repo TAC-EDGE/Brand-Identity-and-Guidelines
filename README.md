@@ -1,8 +1,8 @@
-# TACEDGE Brand Identity & Guidelines
+# TACEDGE Brand & Design System
 
-**Version 1.0 — the authoritative source of truth for the TACEDGE brand.**
+**Version 1.1 — the authoritative source of truth for the TACEDGE brand, and the practical source of truth for creating TACEDGE artefacts.**
 
-This repository holds the brand system: foundations, messaging, logo standards, colour, typography, layout, iconography, graphic language, photography and product-imagery direction, digital UI principles, applications, the approved asset library, machine-readable design tokens, an interactive guidelines site and the printable PDF edition.
+This repository holds the brand system (foundations, messaging, logo standards, colour, typography, layout, iconography, graphic language, imagery direction, digital UI principles, applications), the approved asset library, machine-readable design tokens, the **template library** (presentation deck, meeting minutes, pilot proposal, technical report, letterhead, legal formatting, one-page collateral, email signature), an interactive guidelines-and-templates app and the printable PDF edition.
 
 Authority flows downward:
 
@@ -28,8 +28,10 @@ npm run dev        # interactive guidelines site at http://localhost:5173
 | `npm run preview` | Serve the production build at http://localhost:4173 |
 | `npm run typecheck` | TypeScript check |
 | `npm test` | Token consistency + WCAG contrast checks (`scripts/check-tokens.mjs`) |
-| `npm run export:pdf` | Export `exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf` + page previews + contact sheet (needs `npm run preview` running) |
-| `npm run export:style-tile` | Export `exports/TACEDGE_Style_Tile_v1.0.{pdf,png}` (needs preview running) |
+| `npm run export:templates` | Regenerate the PPTX deck, DOCX suite and one-page collateral exports |
+| `npm run generate:pptx` / `generate:docx` / `export:one-page` | Individual template generators |
+| `npm run export:pdf` | Export `exports/TACEDGE_Brand_Identity_and_Guidelines_v1.1.pdf` + page previews + contact sheet (needs `npm run preview` running) |
+| `npm run export:style-tile` | Export `exports/TACEDGE_Style_Tile_v1.1.{pdf,png}` (needs preview running) |
 | `npm run export:logo-pngs` | Regenerate PNG logo derivatives from the master SVGs |
 | `npm run screenshots` | Full-page screenshots of every section to `docs/screenshots/` |
 
@@ -38,6 +40,8 @@ The export scripts drive the pre-installed Chromium via `playwright-core` (`CHRO
 ## Repository map
 
 ```
+templates/     Template library: editable sources, PDF examples, PNG
+               previews, per-template READMEs + manifest.json
 assets/        Approved asset library (logos, icons, patterns, photography,
                product imagery, application examples) + asset-manifest.md
 tokens/        Design tokens: JSON sources + tokens.css + tokens.ts
@@ -81,3 +85,7 @@ Semantic versioning, governed in `docs/governance.md`:
 - **patch** — corrections
 
 The site header, PDF cover and `CHANGELOG.md` must always state the same version. Open decisions awaiting founder approval are catalogued in `docs/decisions-required.md` and flagged **PROVISIONAL** wherever they surface.
+
+## Templates
+
+`templates/` is the template library; `templates/manifest.json` is its machine-readable register (version, status, owner, paths). Sources are generated programmatically — `scripts/generate-pptx.mjs`, `scripts/generate-docx.mjs`, the one-page HTML masters — so a brand change regenerates the whole suite. PDF examples come from LibreOffice conversion of the real files; PNG previews from `scripts/pdf-to-pngs.mjs`. Never edit exports by hand. Office files reference fonts by name (Play, Be Vietnam Pro, JetBrains Mono, from Google Fonts) with Arial/Consolas fallbacks; fonts are not distributed.

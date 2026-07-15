@@ -1,4 +1,4 @@
-// Exports the print edition to exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf
+// Exports the print edition to exports/TACEDGE_Brand_Identity_and_Guidelines_v1.1.pdf
 // plus per-page preview PNGs and a contact sheet under exports/previews/.
 // Requires the built site to be served (default http://localhost:4173).
 // Usage: npm run export:pdf [-- baseUrl]
@@ -31,7 +31,7 @@ if (overflows.length) {
   process.exitCode = 1;
 }
 
-const pdfPath = join(outDir, "TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf");
+const pdfPath = join(outDir, "TACEDGE_Brand_Identity_and_Guidelines_v1.1.pdf");
 await page.pdf({ path: pdfPath, format: "A4", printBackground: true, preferCSSPageSize: true });
 console.log(`wrote ${pdfPath}`);
 

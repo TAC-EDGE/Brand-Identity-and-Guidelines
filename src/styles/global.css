@@ -320,3 +320,64 @@ code { font-family: var(--te-mono); font-size: 0.88em; }
 .page-footer { border-top: 1px solid var(--te-line); margin-top: 72px; padding-top: 24px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; color: var(--te-ink-40); font-size: var(--te-fs-base); }
 .page-footer nav { display: flex; gap: 10px; }
 .page-footer a { color: var(--te-ink-60); }
+
+/* ============================================================
+   v1.1 — Templates area
+   ============================================================ */
+
+.sidebar__group { margin-bottom: 10px; }
+.sidebar__group-title {
+  font-family: var(--te-mono); font-size: var(--te-fs-2xs); font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--te-sage);
+  opacity: .8; padding: 10px 12px 4px; margin: 0;
+  border-top: 1px solid var(--te-cream-line);
+}
+.sidebar__group:first-child .sidebar__group-title { border-top: 0; padding-top: 2px; }
+
+.tstatus {
+  display: inline-flex; align-items: center; gap: 6px;
+  border-radius: var(--te-r-pill); padding: 3px 11px;
+  font-family: var(--te-mono); font-size: var(--te-fs-2xs); font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+}
+.tstatus::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.tstatus--approved { background: var(--te-forest); color: var(--te-cream); }
+.tstatus--provisional { background: var(--te-ochre-tint); color: #8A5F1D; }
+.tstatus--in-development { background: var(--te-tint); color: var(--te-ink-60); border: 1px solid var(--te-line-2); }
+.tstatus--deprecated { background: var(--te-brick-tint); color: var(--te-brick); }
+
+.tcard { display: flex; flex-direction: column; overflow: hidden; }
+.tcard__preview {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--te-stage); border-bottom: 1px solid var(--te-line);
+  padding: 18px; min-height: 170px;
+}
+.tcard__preview img { max-height: 190px; width: auto; max-width: 100%; box-shadow: var(--te-shadow-md); border: 1px solid var(--te-line); }
+.tcard__noimg { font-family: var(--te-mono); color: var(--te-ink-40); letter-spacing: .2em; }
+.tcard__body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.tcard__head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tcard__head h3 { font-size: var(--te-fs-lg); }
+.tcard__purpose { color: var(--te-ink-60); font-size: var(--te-fs-base); }
+.tcard__meta { font-family: var(--te-mono); font-size: var(--te-fs-xs); color: var(--te-ink-40); letter-spacing: .04em; }
+.tcard__actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; }
+
+.pstrip { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 12px; }
+.pstrip__item {
+  flex-shrink: 0; position: relative; border: 1px solid var(--te-line);
+  border-radius: var(--te-r-sm); overflow: hidden; padding: 0; cursor: zoom-in;
+  background: var(--te-card); transition: box-shadow var(--te-motion), transform var(--te-motion);
+}
+.pstrip__item:hover { box-shadow: var(--te-shadow-md); transform: translateY(-1px); }
+.pstrip__item img { display: block; height: 190px; width: auto; }
+.pstrip__num {
+  position: absolute; bottom: 6px; right: 6px;
+  font-family: var(--te-mono); font-size: var(--te-fs-2xs); color: var(--te-cream);
+  background: rgba(17,36,17,.75); border-radius: 5px; padding: 2px 6px;
+}
+
+.pviewer { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.pviewer__scrim { position: absolute; inset: 0; background: rgba(17,36,17,.6); border: 0; cursor: pointer; }
+.pviewer__body { position: relative; margin: 0; background: var(--te-card); border-radius: var(--te-r-card); padding: 16px; box-shadow: var(--te-shadow-lg); max-width: min(92vw, 980px); max-height: 92vh; display: flex; flex-direction: column; gap: 12px; }
+.pviewer__body img { max-width: 100%; max-height: calc(92vh - 110px); object-fit: contain; border: 1px solid var(--te-line); border-radius: var(--te-r-sm); }
+.pviewer__body figcaption { display: flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--te-mono); font-size: var(--te-fs-sm); color: var(--te-ink-60); }
+.pviewer__body .btn { min-height: 40px; padding: 8px 16px; font-size: var(--te-fs-base); }

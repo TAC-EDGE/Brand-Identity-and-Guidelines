@@ -1,8 +1,8 @@
 {
   "name": "tacedge-brand-guidelines",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "TACEDGE Brand Identity & Guidelines — authoritative brand system, interactive guidelines site, design tokens and approved assets.",
+  "description": "TACEDGE Brand & Design System \u2014 authoritative brand system, interactive guidelines and templates app, design tokens, approved assets and template library.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,11 @@
     "export:style-tile": "node scripts/export-style-tile.mjs",
     "export:logo-pngs": "node scripts/export-logo-pngs.mjs",
     "screenshots": "node scripts/screenshots.mjs",
-    "test": "node scripts/check-tokens.mjs"
+    "test": "node scripts/check-tokens.mjs",
+    "generate:pptx": "node scripts/generate-pptx.mjs",
+    "generate:docx": "node scripts/generate-docx.mjs",
+    "export:one-page": "node scripts/export-one-page.mjs",
+    "export:templates": "npm run generate:pptx && npm run generate:docx && npm run export:one-page"
   },
   "dependencies": {
     "react": "^19.2.7",
@@ -24,7 +28,10 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "docx": "^9.7.1",
+    "pdfjs-dist": "^4.10.38",
     "playwright-core": "^1.61.1",
+    "pptxgenjs": "^4.0.1",
     "typescript": "5.9",
     "vite": "^6.0.0"
   }

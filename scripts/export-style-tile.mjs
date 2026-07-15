@@ -1,4 +1,4 @@
-// Exports the one-page style tile to exports/TACEDGE_Style_Tile_v1.0.pdf and .png.
+// Exports the one-page style tile to exports/TACEDGE_Style_Tile_v1.1.pdf and .png.
 // Requires the built site to be served (default http://localhost:4173).
 // Usage: npm run export:style-tile [-- baseUrl]
 import { chromium } from "playwright-core";
@@ -26,11 +26,11 @@ if (overflow) {
 }
 
 await page.pdf({
-  path: "exports/TACEDGE_Style_Tile_v1.0.pdf",
+  path: "exports/TACEDGE_Style_Tile_v1.1.pdf",
   printBackground: true,
   preferCSSPageSize: true,
   landscape: false,
 });
-await page.locator(".tile").screenshot({ path: "exports/TACEDGE_Style_Tile_v1.0.png" });
-console.log("wrote exports/TACEDGE_Style_Tile_v1.0.{pdf,png}");
+await page.locator(".tile").screenshot({ path: "exports/TACEDGE_Style_Tile_v1.1.png" });
+console.log("wrote exports/TACEDGE_Style_Tile_v1.1.{pdf,png}");
 await browser.close();

@@ -1,5 +1,5 @@
 import { useEffect, useState, type ComponentType } from "react";
-import { sections, VERSION, LAST_UPDATED, type Slug } from "./content/site";
+import { sections, navGroups, VERSION, LAST_UPDATED, SITE_NAME, PDF_EXPORT, type Slug } from "./content/site";
 import Overview from "./pages/Overview";
 import Foundations from "./pages/Foundations";
 import Messaging from "./pages/Messaging";
@@ -15,6 +15,14 @@ import DigitalUI from "./pages/DigitalUI";
 import Applications from "./pages/Applications";
 import Downloads from "./pages/Downloads";
 import Governance from "./pages/Governance";
+import TemplatesOverview from "./pages/TemplatesOverview";
+import TemplateDetail from "./pages/TemplateDetail";
+
+const templateSlugs = [
+  "template-presentation", "template-meeting-minutes", "template-pilot-proposal",
+  "template-technical-report", "template-letterhead", "template-legal",
+  "template-one-page", "template-email-signature",
+] as const;
 
 const pages: Record<Slug, ComponentType> = {
   overview: Overview,
@@ -30,6 +38,10 @@ const pages: Record<Slug, ComponentType> = {
   "product-imagery": ProductImagery,
   "digital-ui": DigitalUI,
   applications: Applications,
+  templates: TemplatesOverview,
+  ...(Object.fromEntries(
+    templateSlugs.map((slug) => [slug, () => <TemplateDetail slug={slug} />])
+  ) as unknown as Record<(typeof templateSlugs)[number], ComponentType>),
   downloads: Downloads,
   governance: Governance,
 };
@@ -55,13 +67,14 @@ export default function App() {
 
   useEffect(() => {
     const section = sections.find((s) => s.slug === slug);
-    document.title = `${section?.label ?? "Overview"} · TACEDGE Brand Guidelines v${VERSION}`;
+    document.title = `${section?.label ?? "Overview"} · TACEDGE ${SITE_NAME} v${VERSION}`;
   }, [slug]);
 
   const Page = pages[slug];
-  const index = sections.findIndex((s) => s.slug === slug);
-  const prev = sections[index - 1];
-  const next = sections[index + 1];
+  const flat = navGroups.flatMap((g) => g.slugs);
+  const index = flat.indexOf(slug);
+  const prev = sections.find((s) => s.slug === flat[index - 1]);
+  const next = sections.find((s) => s.slug === flat[index + 1]);
 
   return (
     <>
@@ -82,25 +95,31 @@ export default function App() {
       <div className="shell">
         <aside className={`sidebar on-dark${menuOpen ? " open" : ""}`}>
           <div className="sidebar__head">
-            <a href="#/overview" aria-label="TACEDGE Brand Guidelines home">
+            <a href="#/overview" aria-label={`TACEDGE ${SITE_NAME} home`}>
               <img src="assets/logos/horizontal/tacedge-lockup-cream.svg" alt="TACEDGE" width={182} height={36} />
             </a>
-            <p className="sidebar__version">Brand Guidelines · v{VERSION}</p>
+            <p className="sidebar__version">{SITE_NAME} · v{VERSION}</p>
           </div>
-          <nav id="site-nav" aria-label="Guideline sections">
-            {sections.map((s) => (
-              <a key={s.slug} href={`#/${s.slug}`} aria-current={s.slug === slug ? "page" : undefined}>
-                <span className="num" aria-hidden="true">{s.num}</span>
-                {s.label}
-              </a>
+          <nav id="site-nav" aria-label="Sections">
+            {navGroups.map((group) => (
+              <div key={group.title} className="sidebar__group">
+                <p className="sidebar__group-title" aria-hidden="true">{group.title}</p>
+                {group.slugs.map((gs) => {
+                  const s = sections.find((x) => x.slug === gs)!;
+                  return (
+                    <a key={s.slug} href={`#/${s.slug}`} aria-current={s.slug === slug ? "page" : undefined}>
+                      <span className="num" aria-hidden="true">{s.num}</span>
+                      {s.label}
+                    </a>
+                  );
+                })}
+              </div>
             ))}
           </nav>
           <div className="sidebar__foot">
             Version {VERSION} · {LAST_UPDATED}
             <br />
-            <a href="exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf" download>
-              Download the PDF edition
-            </a>
+            <a href={PDF_EXPORT} download>Download the PDF edition</a>
           </div>
         </aside>
         <main id="content">
@@ -111,7 +130,7 @@ export default function App() {
                 {prev && <a href={`#/${prev.slug}`}>← {prev.label}</a>}
                 {next && <a href={`#/${next.slug}`}>{next.label} →</a>}
               </nav>
-              <span>TACEDGE Brand Identity &amp; Guidelines · v{VERSION} · {LAST_UPDATED}</span>
+              <span>TACEDGE {SITE_NAME} · v{VERSION} · {LAST_UPDATED}</span>
             </footer>
           </div>
         </main>

@@ -1,4 +1,7 @@
 import { PageHero, Section, DownloadCard, RuleList } from "../components/ui";
+import { StatusBadge } from "../components/templates-ui";
+import { manifest } from "../content/templates";
+import { PDF_EXPORT, STYLE_TILE_PDF } from "../content/site";
 
 const L = "assets/logos";
 
@@ -13,8 +16,29 @@ export default function Downloads() {
 
       <Section title="Documents">
         <div className="grid grid--2">
-          <DownloadCard href="exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf" name="Brand Identity & Guidelines v1.0" meta="PDF · A4 · full edition" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-forest)" />
-          <DownloadCard href="exports/TACEDGE_Style_Tile_v1.0.pdf" name="Style Tile v1.0" meta="PDF · one page · supplier briefing" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-sage-tint)" />
+          <DownloadCard href={PDF_EXPORT} name="Brand & Design System v1.1" meta="PDF · A4 · full edition" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-forest)" />
+          <DownloadCard href={STYLE_TILE_PDF} name="Style Tile v1.1" meta="PDF · one page · supplier briefing" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-sage-tint)" />
+        </div>
+      </Section>
+
+      <Section title="Templates" sub="Editable sources plus rendered PDF examples. Full usage guidance lives in each template's page under Templates.">
+        <div className="grid grid--2">
+          {manifest.filter((t) => t.status !== "deprecated").map((t) => (
+            <div key={t.id} className="card dl" style={{ cursor: "default" }}>
+              <span className="dl__preview" style={{ background: "var(--te-tint)" }} aria-hidden="true">
+                <span style={{ fontFamily: "var(--te-mono)", fontSize: "var(--te-fs-xs)", color: "var(--te-ink-40)" }}>{t.format.split(" ")[0]}</span>
+              </span>
+              <span style={{ flex: 1 }}>
+                <span className="dl__name">{t.name} <StatusBadge status={t.status} /></span>
+                <span className="dl__meta" style={{ display: "block" }}>v{t.version} · updated {t.lastUpdated}</span>
+                <span style={{ display: "flex", gap: 14, marginTop: 6, fontSize: "var(--te-fs-base)" }}>
+                  <a href={t.downloadPath} download style={{ color: "var(--te-forest-hover)", fontWeight: 600 }}>Source</a>
+                  {t.previewPdf && <a href={t.previewPdf} download style={{ color: "var(--te-ink-60)" }}>PDF example</a>}
+                </span>
+              </span>
+            </div>
+          ))}
+          <DownloadCard href="templates/manifest.json" name="Template manifest" meta="JSON · versions, status, owners, paths" />
         </div>
       </Section>
 

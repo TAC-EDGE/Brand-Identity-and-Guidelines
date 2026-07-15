@@ -1,0 +1,112 @@
+<!doctype html>
+<!-- TACEDGE one-page collateral template v1.0 (blank master).
+     A4 portrait. Edit the [bracketed] fields; keep word counts (data-max notes).
+     Fonts: Play, Be Vietnam Pro, JetBrains Mono (install from Google Fonts;
+     fallbacks are system sans/mono). Export: print to PDF at A4, 100%, backgrounds on. -->
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<title>TACEDGE one-page collateral — blank master v1.0</title>
+<style>
+  /* Brand tokens (mirrors tokens/tokens.css) */
+  :root{
+    --forest:#112411; --forest-2:#1A3219; --forest-line:#1B331A; --olive:#6E7D5C;
+    --olive-edge:#AEB89C; --sage:#B2B594; --sage-tint:#E6EBD9; --cream:#F7F5EC;
+    --card:#FFFFFF; --tint:#EFF1E4; --ink:#242A1F; --ink-60:#5B6253; --ink-40:#646A5A;
+    --line:#E7E2D6; --line-2:#D9D3C4;
+    --display:'Play',system-ui,sans-serif; --ui:'Be Vietnam Pro',system-ui,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  @page{size:A4;margin:0}
+  *{box-sizing:border-box;margin:0}
+  html,body{width:210mm;height:297mm}
+  body{
+    font-family:var(--ui);color:var(--ink);background:var(--cream);
+    padding:12mm 13mm;display:flex;flex-direction:column;gap:4.5mm;justify-content:space-between;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:9.5pt;line-height:1.5;
+  }
+  .placeholder{color:var(--olive)}
+  .k{font-family:var(--mono);font-size:6.5pt;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-40);display:block;margin-bottom:1.5mm}
+  header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:0.3mm solid var(--line-2);padding-bottom:3mm}
+  header img{height:8mm}
+  h1{font-family:var(--display);font-size:26pt;line-height:1.05;letter-spacing:.01em}
+  h2{font-family:var(--display);font-size:12.5pt;margin-bottom:2mm}
+  .cat{color:var(--olive);font-weight:600;font-size:8pt;margin-top:1.5mm}
+  .cols{display:grid;grid-template-columns:1.4fr 1fr;gap:5mm}
+  .card{background:var(--card);border:0.25mm solid var(--line);border-radius:3mm;padding:4mm 4.5mm}
+  .panel{background:var(--sage-tint);border:0.25mm solid rgba(110,125,92,.28);border-radius:3.5mm;padding:4mm 4.5mm}
+  ul{padding-left:4.5mm;color:var(--ink-60);display:grid;gap:1.2mm}
+  .flow{display:flex;gap:2mm;align-items:center;margin-top:2mm}
+  .flow>span{flex:1;text-align:center;border:0.25mm solid var(--olive-edge);border-radius:2mm;padding:2mm 1mm;font-weight:700;font-size:7.5pt;background:var(--card);color:var(--forest)}
+  .flow>span.done{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+  .flow em{color:var(--olive);font-style:normal}
+  .qr{display:flex;gap:4mm;align-items:center}
+  .qr .box{width:22mm;height:22mm;flex-shrink:0;border:0.3mm dashed var(--olive-edge);border-radius:2mm;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:6pt;color:var(--ink-40);text-align:center;padding:2mm}
+  footer{margin-top:auto;border-top:0.3mm solid var(--line-2);padding-top:2.5mm;display:flex;justify-content:space-between;font-family:var(--mono);font-size:6.5pt;letter-spacing:.06em;color:var(--ink-40)}
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <span class="k">TACEDGE × [Counterpart] <span class="placeholder">· max 6 words</span></span>
+      <div style="font-weight:600;font-size:9pt"><span class="placeholder">[Meeting or event context]</span></div>
+      <div style="color:var(--ink-60);font-size:8pt"><span class="placeholder">[For whom · role · date]</span></div>
+    </div>
+    <img src="../../assets/logos/horizontal/tacedge-lockup-forest.svg" alt="TACEDGE">
+  </header>
+
+  <section>
+    <h1><span class="placeholder">[Headline. One idea, max 6 words.]</span></h1>
+    <p class="cat"><span class="placeholder">[Support line, max 12 words.]</span></p>
+  </section>
+
+  <section class="cols">
+    <div>
+      <span class="k">The problem</span>
+      <h2><span class="placeholder">[Problem headline, max 8 words.]</span></h2>
+      <ul>
+        <li><span class="placeholder">[Point one, max 12 words]</span></li>
+        <li><span class="placeholder">[Point two, max 12 words]</span></li>
+        <li><span class="placeholder">[Point three, max 12 words]</span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <span class="k" style="color:var(--forest)">The point</span>
+      <p style="font-weight:600;color:var(--forest)"><span class="placeholder">[Callout: the single sentence you want remembered. Max 18 words.]</span></p>
+    </div>
+  </section>
+
+  <section class="card">
+    <span class="k">The workflow · Configure. Capture. Confirm.</span>
+    <div class="flow">
+      <span><span class="placeholder">[Stage]</span></span><em>→</em>
+      <span><span class="placeholder">[Stage]</span></span><em>→</em>
+      <span class="done"><span style="color:inherit" class="placeholder">[Outcome]</span></span>
+    </div>
+    <p style="font-size:8pt;color:var(--ink-40);margin-top:2mm"><span class="placeholder">[One supporting line, max 15 words.]</span></p>
+  </section>
+
+  <section class="cols">
+    <div class="card">
+      <span class="k">Questions we'd like to explore</span>
+      <ul>
+        <li><span class="placeholder">[Question 01, max 15 words]</span></li>
+        <li><span class="placeholder">[Question 02, max 15 words]</span></li>
+        <li><span class="placeholder">[Question 03, max 15 words]</span></li>
+      </ul>
+    </div>
+    <div class="card qr">
+      <div class="box">QR<br>22×22 mm min<br>3 mm quiet zone</div>
+      <div>
+        <span class="k">Next step</span>
+        <p style="font-size:8.5pt;color:var(--ink-60)"><span class="placeholder">[Action + where the QR goes. Max 20 words.]</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>TACEDGE · Shared clarity for ground-engineering delivery.</span>
+    <span>[name]@tacedge.co.nz · tacedge.co.nz · New Zealand</span>
+  </footer>
+</body>
+</html>

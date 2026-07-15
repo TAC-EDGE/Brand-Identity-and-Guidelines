@@ -10,7 +10,11 @@ mkdirSync(out, { recursive: true });
 const slugs = [
   "overview", "foundations", "messaging", "logo", "colour", "typography",
   "layout", "iconography", "graphic-language", "photography",
-  "product-imagery", "digital-ui", "applications", "downloads", "governance",
+  "product-imagery", "digital-ui", "applications",
+  "templates", "template-presentation", "template-meeting-minutes",
+  "template-pilot-proposal", "template-technical-report", "template-letterhead",
+  "template-legal", "template-one-page", "template-email-signature",
+  "downloads", "governance",
 ];
 
 const browser = await chromium.launch({
@@ -20,7 +24,7 @@ const browser = await chromium.launch({
 for (const [w, h, tag] of [[1440, 900, "desktop"], [390, 844, "mobile"]]) {
   const ctx = await browser.newContext({ viewport: { width: w, height: h } });
   const page = await ctx.newPage();
-  const routes = tag === "desktop" ? slugs : ["overview", "colour", "logo"];
+  const routes = tag === "desktop" ? slugs : ["overview", "colour", "logo", "templates"];
   for (const slug of routes) {
     await page.goto(`${base}/#/${slug}`, { waitUntil: "networkidle" });
     await page.waitForTimeout(400);

@@ -12,7 +12,7 @@ const root = dirname(fileURLToPath(import.meta.url));
  * on build, so download links work identically in both.
  */
 function repoStatics(): Plugin {
-  const dirs = ["assets", "tokens", "exports", "docs"];
+  const dirs = ["assets", "tokens", "exports", "docs", "templates"];
   return {
     name: "tacedge-repo-statics",
     configureServer(server) {

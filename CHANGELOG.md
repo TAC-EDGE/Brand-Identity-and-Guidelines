@@ -3,6 +3,26 @@
 All notable changes to the TACEDGE brand system are recorded here.
 Versioning: major = visual identity changes · minor = new sections/assets · patch = corrections.
 
+## [1.1.0] — 2026-07-15
+
+Brand & Design System: adds the template system to the v1.0 identity release.
+
+### Added
+- **Templates area** in the app: grouped navigation (Guidelines / Templates / Library), Template Overview with status cards, and eight guidance pages (Presentation Deck, Meeting Minutes, Pilot Proposal, Technical Report, Letterhead, Legal Documents, One-Page Collateral, Email Signature) with page previews rendered from the real files, an enlarging viewer, do/don't examples and downloads.
+- **Template library** (`templates/`): PPTX presentation template (16:9, 22 approved layouts, generated with pptxgenjs); DOCX suite (meeting minutes, pilot proposal + one-page summary, technical report, letterhead, legal visual template — generated with docx.js, brand styles, placeholder fields, page numbering); one-page collateral HTML masters (blank + generic example, word-count limits, QR rules); email signature (HTML + plain text + installation guidance). Every template ships with PDF example, PNG previews, README and manifest metadata.
+- **Template manifest** (`templates/manifest.json`): machine-readable register of versions, status, owners and paths.
+- Generation/export pipeline: `generate-pptx.mjs`, `generate-docx.mjs`, `export-one-page.mjs`, `pdf-to-pngs.mjs`, npm scripts (`export:templates` etc.).
+- PDF edition: new Templates chapter (now 31 pages); exports renamed to v1.1.
+- Governance: template ownership, versioning, status, review, deprecation, customer-copy and source-vs-export rules (site + `docs/governance.md`); decisions D9, D10.
+- `docs/templates-expansion-audit.md` (Phase 1 audit) and `docs/qa-report-v1.1.md`.
+
+### Changed
+- Site renamed to **TACEDGE Brand & Design System**; version 1.1 across app, PDF and style tile.
+- Downloads page gains a Templates section driven by the manifest.
+
+### Deprecated
+- v1.0 export filenames (`TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf`, `TACEDGE_Style_Tile_v1.0.*`) replaced by v1.1 equivalents.
+
 ## [1.0.0] — 2026-07-15
 
 First authoritative release.

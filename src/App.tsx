@@ -83,7 +83,7 @@ export default function App() {
         <aside className={`sidebar on-dark${menuOpen ? " open" : ""}`}>
           <div className="sidebar__head">
             <a href="#/overview" aria-label="TACEDGE Brand Guidelines home">
-              <img src="/assets/logos/horizontal/tacedge-lockup-cream.svg" alt="TACEDGE" width={182} height={36} />
+              <img src="assets/logos/horizontal/tacedge-lockup-cream.svg" alt="TACEDGE" width={182} height={36} />
             </a>
             <p className="sidebar__version">Brand Guidelines · v{VERSION}</p>
           </div>
@@ -98,7 +98,7 @@ export default function App() {
           <div className="sidebar__foot">
             Version {VERSION} · {LAST_UPDATED}
             <br />
-            <a href="/exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf" download>
+            <a href="exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf" download>
               Download the PDF edition
             </a>
           </div>

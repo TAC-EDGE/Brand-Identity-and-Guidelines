@@ -1,6 +1,6 @@
 import { PageHero, Section, RuleList, TokenTable, DoDont, Flag } from "../components/ui";
 
-const L = "/assets/logos";
+const L = "assets/logos";
 
 export default function Logo() {
   return (
@@ -88,7 +88,7 @@ export default function Logo() {
             {
               kind: "dont",
               stage: <img src={`${L}/horizontal/tacedge-lockup-cream.svg`} alt="TACEDGE lockup over visually noisy photograph" style={{ height: 30, position: "relative", zIndex: 1 }} />,
-              stageStyle: { backgroundImage: "url(/assets/photography/photo-capture-abseil.webp)", backgroundSize: "cover", backgroundPosition: "center" },
+              stageStyle: { backgroundImage: "url(assets/photography/photo-capture-abseil.webp)", backgroundSize: "cover", backgroundPosition: "center" },
               caption: "Not over visually noisy imagery. Place the logo on a flat brand surface or a calm image area.",
             },
             {

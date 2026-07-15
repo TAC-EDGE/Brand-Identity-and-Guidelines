@@ -20,7 +20,7 @@ export default function StyleTile() {
         <svg className="contour" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           {contourPaths.map((d, i) => <path key={i} d={d} />)}
         </svg>
-        <img src="/assets/logos/horizontal/tacedge-lockup-cream.svg" alt="TACEDGE" style={{ height: "9mm", width: "auto", position: "relative" }} />
+        <img src="assets/logos/horizontal/tacedge-lockup-cream.svg" alt="TACEDGE" style={{ height: "9mm", width: "auto", position: "relative" }} />
         <div style={{ position: "relative" }}>
           <p style={{ fontFamily: "var(--te-display)", fontWeight: 700, fontSize: "24pt", lineHeight: 1.02, color: "var(--te-cream)" }}>Shared Clarity.</p>
           <p style={{ color: "var(--te-sage)", fontWeight: 600, fontSize: "8pt", marginTop: "1.5mm" }}>{brand.category}</p>
@@ -59,10 +59,10 @@ export default function StyleTile() {
           <span className="tile__label">Logo</span>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5mm", alignItems: "stretch" }}>
             <div style={{ background: "var(--te-forest)", borderRadius: "2mm", display: "flex", alignItems: "center", justifyContent: "center", padding: "4mm" }}>
-              <img src="/assets/logos/horizontal/tacedge-lockup-cream.svg" alt="Cream lockup on forest" style={{ height: "6mm" }} />
+              <img src="assets/logos/horizontal/tacedge-lockup-cream.svg" alt="Cream lockup on forest" style={{ height: "6mm" }} />
             </div>
             <div style={{ background: "var(--te-card)", border: "0.2mm solid var(--te-line)", borderRadius: "2mm", display: "flex", alignItems: "center", justifyContent: "center", padding: "4mm" }}>
-              <img src="/assets/logos/horizontal/tacedge-lockup-forest.svg" alt="Forest lockup on white" style={{ height: "6mm" }} />
+              <img src="assets/logos/horizontal/tacedge-lockup-forest.svg" alt="Forest lockup on white" style={{ height: "6mm" }} />
             </div>
           </div>
           <p className="tile__note">Master SVGs only. Never redraw. Clear space: one brandmark height. Minimum width 30 mm print / 120 px digital.</p>
@@ -92,7 +92,7 @@ export default function StyleTile() {
         {/* Photography */}
         <div className="tile__cell" style={{ gridColumn: "span 4" }}>
           <span className="tile__label">Photography</span>
-          <img src="/assets/photography/photo-capture-abseil.webp" alt="Documentary field photography: operator on ropes recording a drill log" style={{ width: "100%", aspectRatio: "8/5", objectFit: "cover", borderRadius: "2mm" }} />
+          <img src="assets/photography/photo-capture-abseil.webp" alt="Documentary field photography: operator on ropes recording a drill log" style={{ width: "100%", aspectRatio: "8/5", objectFit: "cover", borderRadius: "2mm" }} />
           <p className="tile__note">Real crews, real ground, natural light. Documentary, never staged.</p>
         </div>
 
@@ -101,7 +101,7 @@ export default function StyleTile() {
           <span className="tile__label">Product imagery</span>
           <div style={{ background: "var(--te-stage)", borderRadius: "2mm", padding: "3mm" }}>
             <div style={{ background: "#262b25", borderRadius: "1.8mm", padding: "1.5mm 1.2mm 1.2mm" }}>
-              <img src="/assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="Real TACEDGE QA queue screen in a graphite frame" style={{ width: "100%", borderRadius: "0.8mm", display: "block" }} />
+              <img src="assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="Real TACEDGE QA queue screen in a graphite frame" style={{ width: "100%", borderRadius: "0.8mm", display: "block" }} />
             </div>
           </div>
           <p className="tile__note">Real screens in graphite frames on Stage. No invention, no distortion.</p>

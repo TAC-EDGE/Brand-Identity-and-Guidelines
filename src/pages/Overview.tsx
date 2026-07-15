@@ -24,7 +24,7 @@ export default function Overview() {
     <>
       <div className="panel--dark on-dark" style={{ marginTop: 40, padding: "clamp(40px, 6vw, 72px) clamp(28px, 5vw, 56px)" }}>
         <ContourMotif />
-        <img src="/assets/logos/horizontal/tacedge-lockup-cream.svg" alt="TACEDGE" width={280} height={55} style={{ height: 44, width: "auto" }} />
+        <img src="assets/logos/horizontal/tacedge-lockup-cream.svg" alt="TACEDGE" width={280} height={55} style={{ height: 44, width: "auto" }} />
         <h1 style={{ fontSize: "clamp(48px, 7vw, 84px)", color: "var(--te-cream)", marginTop: 40, lineHeight: 1.05 }}>
           Shared<br />Clarity.
         </h1>

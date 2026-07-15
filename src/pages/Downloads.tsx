@@ -1,6 +1,6 @@
 import { PageHero, Section, DownloadCard, RuleList } from "../components/ui";
 
-const L = "/assets/logos";
+const L = "assets/logos";
 
 export default function Downloads() {
   return (
@@ -13,8 +13,8 @@ export default function Downloads() {
 
       <Section title="Documents">
         <div className="grid grid--2">
-          <DownloadCard href="/exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf" name="Brand Identity & Guidelines v1.0" meta="PDF · A4 · full edition" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-forest)" />
-          <DownloadCard href="/exports/TACEDGE_Style_Tile_v1.0.pdf" name="Style Tile v1.0" meta="PDF · one page · supplier briefing" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-sage-tint)" />
+          <DownloadCard href="exports/TACEDGE_Brand_Identity_and_Guidelines_v1.0.pdf" name="Brand Identity & Guidelines v1.0" meta="PDF · A4 · full edition" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-forest)" />
+          <DownloadCard href="exports/TACEDGE_Style_Tile_v1.0.pdf" name="Style Tile v1.0" meta="PDF · one page · supplier briefing" preview={`${L}/brandmark/tacedge-brandmark-sage.svg`} previewBg="var(--te-sage-tint)" />
         </div>
       </Section>
 
@@ -35,29 +35,29 @@ export default function Downloads() {
 
       <Section title="Patterns and icons">
         <div className="grid grid--2">
-          <DownloadCard href="/assets/patterns/tacedge-contour-dark.svg" name="Contour pattern · dark" meta="SVG 1600×500 · forest surfaces" preview="/assets/patterns/tacedge-contour-dark.svg" previewBg="var(--te-forest)" />
-          <DownloadCard href="/assets/patterns/tacedge-contour-light.svg" name="Contour pattern · light" meta="SVG 1600×500 · tinted panels" preview="/assets/patterns/tacedge-contour-light.svg" />
-          <DownloadCard href="/assets/patterns/tacedge-contour-lines-only.svg" name="Contour pattern · currentColor" meta="SVG · for developers" preview="/assets/patterns/tacedge-contour-light.svg" />
-          <DownloadCard href="/assets/icons/worktype-anchoring.svg" name="Work-type icons (6)" meta="SVG 32px · stroke 1.6 · assets/icons/" preview="/assets/icons/worktype-drilling.svg" previewBg="var(--te-card)" />
+          <DownloadCard href="assets/patterns/tacedge-contour-dark.svg" name="Contour pattern · dark" meta="SVG 1600×500 · forest surfaces" preview="assets/patterns/tacedge-contour-dark.svg" previewBg="var(--te-forest)" />
+          <DownloadCard href="assets/patterns/tacedge-contour-light.svg" name="Contour pattern · light" meta="SVG 1600×500 · tinted panels" preview="assets/patterns/tacedge-contour-light.svg" />
+          <DownloadCard href="assets/patterns/tacedge-contour-lines-only.svg" name="Contour pattern · currentColor" meta="SVG · for developers" preview="assets/patterns/tacedge-contour-light.svg" />
+          <DownloadCard href="assets/icons/worktype-anchoring.svg" name="Work-type icons (6)" meta="SVG 32px · stroke 1.6 · assets/icons/" preview="assets/icons/worktype-drilling.svg" previewBg="var(--te-card)" />
         </div>
       </Section>
 
       <Section title="Design tokens" sub="Machine-readable. tokens/ is the source of truth; the website and product consume these rather than declaring their own values.">
         <div className="grid grid--2">
-          <DownloadCard href="/tokens/tokens.css" name="tokens.css" meta="CSS custom properties · full set" />
-          <DownloadCard href="/tokens/tokens.ts" name="tokens.ts" meta="Typed TypeScript tokens" />
-          <DownloadCard href="/tokens/colors.json" name="colors.json" meta="Colour source of truth · HEX/RGB/HSL/CMYK/a11y" />
-          <DownloadCard href="/tokens/typography.json" name="typography.json" meta="Families, roles, scale, rules" />
-          <DownloadCard href="/tokens/spacing.json" name="spacing.json" meta="Spacing scale, layout, print margins" />
-          <DownloadCard href="/tokens/radii.json" name="radii.json" meta="Radius and border tokens" />
-          <DownloadCard href="/tokens/shadows.json" name="shadows.json" meta="Elevation tokens" />
-          <DownloadCard href="/tokens/breakpoints.json" name="breakpoints.json" meta="Breakpoints and motion" />
+          <DownloadCard href="tokens/tokens.css" name="tokens.css" meta="CSS custom properties · full set" />
+          <DownloadCard href="tokens/tokens.ts" name="tokens.ts" meta="Typed TypeScript tokens" />
+          <DownloadCard href="tokens/colors.json" name="colors.json" meta="Colour source of truth · HEX/RGB/HSL/CMYK/a11y" />
+          <DownloadCard href="tokens/typography.json" name="typography.json" meta="Families, roles, scale, rules" />
+          <DownloadCard href="tokens/spacing.json" name="spacing.json" meta="Spacing scale, layout, print margins" />
+          <DownloadCard href="tokens/radii.json" name="radii.json" meta="Radius and border tokens" />
+          <DownloadCard href="tokens/shadows.json" name="shadows.json" meta="Elevation tokens" />
+          <DownloadCard href="tokens/breakpoints.json" name="breakpoints.json" meta="Breakpoints and motion" />
         </div>
         <RuleList
           items={[
             <><strong>Consuming the tokens:</strong> import <code>tokens.css</code> (or copy it verbatim) and build on the custom properties; or import <code>tokens.ts</code> in TypeScript. Collateral must consume tokens, never re-declare them.</>,
             <><strong>Fonts are not distributed.</strong> Play, Be Vietnam Pro and JetBrains Mono are Google Fonts (SIL OFL 1.1); self-host woff2 in each property.</>,
-            <>Full inventory with status and provenance: <a href="/assets/asset-manifest.md" download>asset-manifest.md</a>.</>,
+            <>Full inventory with status and provenance: <a href="assets/asset-manifest.md" download>asset-manifest.md</a>.</>,
           ]}
         />
       </Section>

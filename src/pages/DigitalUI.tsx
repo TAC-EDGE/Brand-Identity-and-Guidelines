@@ -58,7 +58,7 @@ export default function DigitalUI() {
             <p style={{ color: "var(--te-ink-60)", fontSize: "var(--te-fs-md)", marginTop: 8 }}>Hover lifts one pixel and deepens the shadow one step.</p>
           </div>
           <div className="card" style={{ overflow: "hidden" }}>
-            <img src="/assets/photography/photo-capture-abseil.webp" alt="Evidence photo: operator recording a drill log at the workface" style={{ width: "100%", aspectRatio: "8/5", objectFit: "cover", display: "block" }} loading="lazy" />
+            <img src="assets/photography/photo-capture-abseil.webp" alt="Evidence photo: operator recording a drill log at the workface" style={{ width: "100%", aspectRatio: "8/5", objectFit: "cover", display: "block" }} loading="lazy" />
             <div style={{ padding: "12px 16px 16px" }}>
               <p style={{ fontFamily: "var(--te-mono)", fontSize: "var(--te-fs-sm)" }}>B12 · drill log · 14:32</p>
               <p style={{ marginTop: 6 }}><span className="status status--submitted">Submitted</span></p>

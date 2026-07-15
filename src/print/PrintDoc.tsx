@@ -10,7 +10,7 @@ import { VERSION, LAST_UPDATED } from "../content/site";
 import typo from "../../tokens/typography.json";
 import spacing from "../../tokens/spacing.json";
 
-const L = "/assets/logos";
+const L = "assets/logos";
 
 function Contour() {
   return (
@@ -129,7 +129,7 @@ export const sheets: SheetDef[] = [
             <p style={{ borderLeft: "0.6mm solid var(--te-sage)", paddingLeft: "4mm", marginTop: "2mm" }}>{origin.missing}</p>
           </div>
           <figure style={{ margin: 0 }}>
-            <img src="/assets/photography/photo-whakaari-peaks.webp" alt="Whakaari / White Island, 2019, with the TACEDGE brandmark peaks in front" style={{ width: "100%", borderRadius: "3.5mm", border: "0.3mm solid var(--te-line)", display: "block" }} />
+            <img src="assets/photography/photo-whakaari-peaks.webp" alt="Whakaari / White Island, 2019, with the TACEDGE brandmark peaks in front" style={{ width: "100%", borderRadius: "3.5mm", border: "0.3mm solid var(--te-line)", display: "block" }} />
             <figcaption className="small" style={{ color: "var(--te-ink-40)", marginTop: "2mm" }}>Whakaari / White Island, 2019</figcaption>
           </figure>
         </div>
@@ -314,7 +314,7 @@ export const sheets: SheetDef[] = [
             { style: { filter: "hue-rotate(160deg) saturate(3)" } as CSSProperties, cap: "Never recolour" },
             { style: { transform: "rotate(-14deg)" } as CSSProperties, cap: "Never rotate" },
             { style: { filter: "drop-shadow(1.5mm 2mm 1mm rgba(0,0,0,.55))" } as CSSProperties, cap: "No shadows or effects" },
-            { bg: "url(/assets/photography/photo-capture-abseil.webp)", cream: true, cap: "Not over visually noisy imagery" },
+            { bg: "url(assets/photography/photo-capture-abseil.webp)", cream: true, cap: "Not over visually noisy imagery" },
             { text: true, cap: "Never rebuild with type or a redrawn mark" },
           ].map((d, i) => (
             <div key={i} className="p-dont">
@@ -560,12 +560,12 @@ export const sheets: SheetDef[] = [
         <div style={{ background: "var(--te-stage)", borderRadius: "5mm", padding: "8mm", display: "grid", gridTemplateColumns: "2.1fr 1fr", gap: "7mm", alignItems: "end" }}>
           <div>
             <div style={{ background: "#262b25", borderRadius: "3.5mm", padding: "3.5mm 2.5mm 2.5mm", boxShadow: "0 4mm 9mm rgba(0,0,0,.32)" }}>
-              <img src="/assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="TACEDGE QA queue on desktop" style={{ width: "100%", borderRadius: "1.5mm", display: "block" }} />
+              <img src="assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="TACEDGE QA queue on desktop" style={{ width: "100%", borderRadius: "1.5mm", display: "block" }} />
             </div>
           </div>
           <div style={{ maxWidth: "34mm" }}>
             <div style={{ background: "#262b25", borderRadius: "6mm", padding: "3mm 1.8mm 2.2mm", boxShadow: "0 4mm 9mm rgba(0,0,0,.32)" }}>
-              <img src="/assets/product-imagery/tacedge-field-capture-b12.webp" alt="TACEDGE field capture on mobile" style={{ width: "100%", borderRadius: "4mm", display: "block" }} />
+              <img src="assets/product-imagery/tacedge-field-capture-b12.webp" alt="TACEDGE field capture on mobile" style={{ width: "100%", borderRadius: "4mm", display: "block" }} />
             </div>
           </div>
         </div>
@@ -612,12 +612,12 @@ export const sheets: SheetDef[] = [
       <>
         <div className="p-grid p-grid--2" style={{ alignItems: "start" }}>
           <div style={{ display: "grid", gap: "4mm" }}>
-            <img src="/assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_front.png" alt="TACEDGE business card front" style={{ width: "100%", borderRadius: "3mm", border: "0.3mm solid var(--te-line)" }} />
-            <img src="/assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_back.png" alt="TACEDGE business card back" style={{ width: "100%", borderRadius: "3mm", border: "0.3mm solid var(--te-line)" }} />
+            <img src="assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_front.png" alt="TACEDGE business card front" style={{ width: "100%", borderRadius: "3mm", border: "0.3mm solid var(--te-line)" }} />
+            <img src="assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_back.png" alt="TACEDGE business card back" style={{ width: "100%", borderRadius: "3mm", border: "0.3mm solid var(--te-line)" }} />
             <p className="small" style={{ color: "var(--te-ink-60)" }}>Business card: 90 × 55 mm trim, 3 mm bleed. Forest front, cream lockup at 49 mm; cream back, contact block left, tonal brandmark bleed.</p>
           </div>
           <div>
-            <img src="/assets/application-examples/leave-behind/TACEDGE_Hunter_Civil_Leave_Behind_15_July_2026.png" alt="Hunter Civil A4 leave-behind" style={{ width: "100%", borderRadius: "3mm", border: "0.3mm solid var(--te-line)" }} />
+            <img src="assets/application-examples/leave-behind/TACEDGE_Hunter_Civil_Leave_Behind_15_July_2026.png" alt="Hunter Civil A4 leave-behind" style={{ width: "100%", borderRadius: "3mm", border: "0.3mm solid var(--te-line)" }} />
             <p className="small" style={{ color: "var(--te-ink-60)", marginTop: "2mm" }}>The Hunter Civil leave-behind: the message hierarchy on one A4 page.</p>
           </div>
         </div>

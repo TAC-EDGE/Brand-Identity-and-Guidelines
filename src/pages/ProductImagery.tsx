@@ -14,14 +14,14 @@ export default function ProductImagery() {
           <div className="device-monitor">
             <div className="device-monitor__screen">
               <span className="device-monitor__camera" aria-hidden="true" />
-              <img src="/assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="TACEDGE QA queue on desktop: submitted records list with a selected record, evidence panel and approval controls" />
+              <img src="assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="TACEDGE QA queue on desktop: submitted records list with a selected record, evidence panel and approval controls" />
             </div>
             <span className="device-monitor__neck" aria-hidden="true" />
             <span className="device-monitor__base" aria-hidden="true" />
           </div>
           <div className="device-phone" style={{ maxWidth: 200 }}>
             <span className="device-phone__speaker" aria-hidden="true" />
-            <img src="/assets/product-imagery/tacedge-field-capture-b12.webp" alt="TACEDGE field capture on mobile: anchor B12 drill log with large controls" />
+            <img src="assets/product-imagery/tacedge-field-capture-b12.webp" alt="TACEDGE field capture on mobile: anchor B12 drill log with large controls" />
           </div>
         </div>
         <TokenTable
@@ -53,12 +53,12 @@ export default function ProductImagery() {
           items={[
             {
               kind: "do",
-              stage: <img src="/assets/product-imagery/tacedge-field-capture-b12.webp" alt="Field capture screen at native proportions" style={{ maxHeight: 130, borderRadius: 10, border: "1px solid var(--te-line)" }} />,
+              stage: <img src="assets/product-imagery/tacedge-field-capture-b12.webp" alt="Field capture screen at native proportions" style={{ maxHeight: 130, borderRadius: 10, border: "1px solid var(--te-line)" }} />,
               caption: "Native proportions, real data structure, correct device class.",
             },
             {
               kind: "dont",
-              stage: <img src="/assets/product-imagery/tacedge-field-capture-b12.webp" alt="Distorted stretched screenshot" style={{ maxHeight: 130, width: 220, borderRadius: 10, border: "1px solid var(--te-line)", objectFit: "fill" }} />,
+              stage: <img src="assets/product-imagery/tacedge-field-capture-b12.webp" alt="Distorted stretched screenshot" style={{ maxHeight: 130, width: 220, borderRadius: 10, border: "1px solid var(--te-line)", objectFit: "fill" }} />,
               caption: "No stretching, squeezing or perspective distortion.",
             },
           ]}

@@ -73,7 +73,7 @@ export default function Foundations() {
           </div>
           <figure style={{ margin: 0 }}>
             <img
-              src="/assets/photography/photo-whakaari-peaks.webp"
+              src="assets/photography/photo-whakaari-peaks.webp"
               alt="Whakaari / White Island viewed from the water in 2019, with the TACEDGE brandmark peaks in front"
               style={{ borderRadius: "var(--te-r-img)", border: "1px solid var(--te-line)", display: "block", width: "100%" }}
             />

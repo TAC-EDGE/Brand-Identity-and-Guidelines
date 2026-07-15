@@ -40,7 +40,7 @@ export default function GraphicLanguage() {
         <div className="grid grid--2">
           <figure style={{ margin: 0 }}>
             <img
-              src="/assets/photography/photo-whakaari-peaks.webp"
+              src="assets/photography/photo-whakaari-peaks.webp"
               alt="Whakaari / White Island with the flat forest and cream brandmark peaks composited in front"
               style={{ borderRadius: "var(--te-r-img)", border: "1px solid var(--te-line)", width: "100%", display: "block" }}
             />
@@ -95,7 +95,7 @@ export default function GraphicLanguage() {
           items={[
             {
               kind: "do",
-              stage: <img src="/assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="Real TACEDGE QA queue screen" style={{ maxHeight: 120, borderRadius: 7, border: "1px solid var(--te-line)" }} />,
+              stage: <img src="assets/product-imagery/tacedge-qa-queue-desktop.webp" alt="Real TACEDGE QA queue screen" style={{ maxHeight: 120, borderRadius: 7, border: "1px solid var(--te-line)" }} />,
               caption: "Real product screens carry the evidence story.",
             },
             {

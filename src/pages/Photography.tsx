@@ -76,12 +76,12 @@ export default function Photography() {
           items={[
             {
               kind: "do",
-              stage: <img src="/assets/photography/photo-whakaari-peaks.webp" alt="Whakaari / White Island, 2019, with brandmark peaks" style={{ maxHeight: 110, borderRadius: 7 }} />,
+              stage: <img src="assets/photography/photo-whakaari-peaks.webp" alt="Whakaari / White Island, 2019, with brandmark peaks" style={{ maxHeight: 110, borderRadius: 7 }} />,
               caption: "Origin context, factual caption, calm composition.",
             },
             {
               kind: "dont",
-              stage: <img src="/assets/photography/photo-whakaari-peaks.webp" alt="Whakaari image with dramatic red grading" style={{ maxHeight: 110, borderRadius: 7, filter: "contrast(1.6) saturate(2.2) hue-rotate(-25deg)" }} />,
+              stage: <img src="assets/photography/photo-whakaari-peaks.webp" alt="Whakaari image with dramatic red grading" style={{ maxHeight: 110, borderRadius: 7, filter: "contrast(1.6) saturate(2.2) hue-rotate(-25deg)" }} />,
               caption: "No dramatising grades, crops or promotional use of the event.",
             },
           ]}

@@ -13,20 +13,20 @@ export default function Applications() {
       <Section title="Reference applications" sub="Approved current work. Use these as the pattern for new material.">
         <div className="grid grid--2">
           <figure className="card" style={{ margin: 0, overflow: "hidden" }}>
-            <img src="/assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_front.png" alt="TACEDGE business card front: cream lockup centred on forest" style={{ width: "100%", display: "block" }} loading="lazy" />
+            <img src="assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_front.png" alt="TACEDGE business card front: cream lockup centred on forest" style={{ width: "100%", display: "block" }} loading="lazy" />
             <figcaption style={{ padding: "12px 16px", fontSize: "var(--te-fs-base)", color: "var(--te-ink-60)", borderTop: "1px solid var(--te-line)" }}>
               Business card front. 90 × 55 mm trim, 3 mm bleed. Forest field, cream lockup at 49 mm.
             </figcaption>
           </figure>
           <figure className="card" style={{ margin: 0, overflow: "hidden" }}>
-            <img src="/assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_back.png" alt="TACEDGE business card back: contact details on cream with tonal brandmark bleeding off the right edge" style={{ width: "100%", display: "block" }} loading="lazy" />
+            <img src="assets/application-examples/business-card/TACEDGE_Business_Card_Mike_Coom_back.png" alt="TACEDGE business card back: contact details on cream with tonal brandmark bleeding off the right edge" style={{ width: "100%", display: "block" }} loading="lazy" />
             <figcaption style={{ padding: "12px 16px", fontSize: "var(--te-fs-base)", color: "var(--te-ink-60)", borderTop: "1px solid var(--te-line)" }}>
               Business card back. Cream field, contact block left, tonal brandmark bleeding off the edge.
             </figcaption>
           </figure>
         </div>
         <figure className="card" style={{ margin: "20px 0 0", overflow: "hidden" }}>
-          <img src="/assets/application-examples/leave-behind/TACEDGE_Hunter_Civil_Leave_Behind_15_July_2026.png" alt="TACEDGE one-page A4 leave-behind for Hunter Civil: promise, problem, workflow spine, next step and QR panel" style={{ width: "100%", display: "block", maxHeight: 720, objectFit: "contain", background: "var(--te-tint)" }} loading="lazy" />
+          <img src="assets/application-examples/leave-behind/TACEDGE_Hunter_Civil_Leave_Behind_15_July_2026.png" alt="TACEDGE one-page A4 leave-behind for Hunter Civil: promise, problem, workflow spine, next step and QR panel" style={{ width: "100%", display: "block", maxHeight: 720, objectFit: "contain", background: "var(--te-tint)" }} loading="lazy" />
           <figcaption style={{ padding: "12px 16px", fontSize: "var(--te-fs-base)", color: "var(--te-ink-60)", borderTop: "1px solid var(--te-line)" }}>
             The Hunter Civil one-page leave-behind: the message hierarchy on one A4 page. Header, promise, problem, workflow spine, questions, next step, footer.
           </figcaption>

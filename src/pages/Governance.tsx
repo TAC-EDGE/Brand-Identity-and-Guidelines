@@ -42,7 +42,7 @@ export default function Governance() {
       <Section title="For external contractors">
         <RuleList
           items={[
-            <>Start with the <a href="/exports/TACEDGE_Style_Tile_v1.0.pdf" download>style tile</a>; the PDF edition is the full contract.</>,
+            <>Start with the <a href="exports/TACEDGE_Style_Tile_v1.0.pdf" download>style tile</a>; the PDF edition is the full contract.</>,
             <>Use only assets from the Downloads section, at the sizes and clear space specified.</>,
             <>CMYK values are indicative: verify on stock with the selected printer before production.</>,
             <>Anything not covered here is a question, not a licence: <strong>info@tacedge.co.nz</strong>.</>,

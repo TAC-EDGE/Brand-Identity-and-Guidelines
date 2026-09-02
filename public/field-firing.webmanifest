@@ -1,0 +1,14 @@
+{
+  "name": "TACEDGE Field Firing",
+  "short_name": "Field Firing",
+  "description": "TACEDGE | Field Firing — All Arms Field Firing Safety planning prototype. Demo data only; not authoritative.",
+  "start_url": "./field-firing.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#112411",
+  "theme_color": "#112411",
+  "icons": [
+    { "src": "assets/logos/app-icon/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/logos/app-icon/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

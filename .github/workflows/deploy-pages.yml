@@ -4,7 +4,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, claude/tacedge-brand-guidelines-v6smkk]
+    branches: [main, claude/tacedge-brand-guidelines-v6smkk, claude/tacedge-field-firing-design-5r0ghg]
   workflow_dispatch:
 
 permissions:

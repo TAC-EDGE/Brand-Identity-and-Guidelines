@@ -5,7 +5,8 @@
 // Every mutation appends an audit event: user, timestamp, action, prev/next.
 
 import { createContext, useContext, useEffect, useMemo, useReducer, type ReactNode } from "react";
-import type { Activity, ActivityConfig, Appointment, AuditEvent, RequirementResponse, RequirementStatus } from "./types";
+import type { Activity, ActivityConfig, Appointment, AuditEvent, RequirementResponse, RequirementStatus, TracePlacement } from "./types";
+import { templateById } from "./trace";
 import { CATALOGUE_ID, CATALOGUE_VERSION } from "./catalogue";
 import { planReadiness } from "./rules";
 import { applyTransition, statusLabels } from "./workflow";
@@ -29,6 +30,9 @@ export type Action =
   | { type: "set-appointment"; id: string; appointment: Appointment }
   | { type: "remove-appointment"; id: string; role: Appointment["role"] }
   | { type: "respond"; id: string; requirementId: string; status: RequirementStatus; value?: string; note?: string }
+  | { type: "trace-add"; id: string; templateId: string; x: number; y: number; rotationDeg: number }
+  | { type: "trace-update"; id: string; placementId: string; x?: number; y?: number; rotationDeg?: number; kind: "moved" | "rotated" }
+  | { type: "trace-remove"; id: string; placementId: string }
   | { type: "transition"; id: string; event: string }
   | { type: "record-approval"; id: string; approvedBy: string; role: string }
   | { type: "storage-unavailable" };
@@ -140,6 +144,69 @@ function reducer(state: State, action: Action): State {
               action.status,
             ),
           ],
+        };
+      });
+
+    case "trace-add":
+      return withActivity(state, action.id, (a) => {
+        const def = templateById(action.templateId);
+        if (!def) return a;
+        const trace = a.trace ?? [];
+        const n = trace.filter((p) => p.templateId === action.templateId).length + 1;
+        const placement: TracePlacement = {
+          id: newId("tp"),
+          templateId: action.templateId,
+          x: action.x,
+          y: action.y,
+          rotationDeg: action.rotationDeg,
+          label: `${def.name.replace(" template (demo)", "")} ${n}`,
+        };
+        const afterApproval = a.status === "approved" || a.status === "active" || a.status === "paused";
+        return {
+          ...a,
+          trace: [...trace, placement],
+          audit: [...a.audit, audit(afterApproval ? "Trace changed after approval" : "Template placed on trace", placement.label)],
+        };
+      });
+
+    case "trace-update":
+      return withActivity(state, action.id, (a) => {
+        const trace = a.trace ?? [];
+        const prev = trace.find((p) => p.id === action.placementId);
+        if (!prev) return a;
+        const next: TracePlacement = {
+          ...prev,
+          x: action.x ?? prev.x,
+          y: action.y ?? prev.y,
+          rotationDeg: action.rotationDeg ?? prev.rotationDeg,
+        };
+        if (next.x === prev.x && next.y === prev.y && next.rotationDeg === prev.rotationDeg) return a;
+        const afterApproval = a.status === "approved" || a.status === "active" || a.status === "paused";
+        return {
+          ...a,
+          trace: trace.map((p) => (p.id === action.placementId ? next : p)),
+          audit: [
+            ...a.audit,
+            audit(
+              afterApproval ? "Trace changed after approval" : `Trace template ${action.kind}`,
+              prev.label,
+              action.kind === "rotated" ? `${Math.round(prev.rotationDeg)}°` : `${Math.round(prev.x)}, ${Math.round(prev.y)}`,
+              action.kind === "rotated" ? `${Math.round(next.rotationDeg)}°` : `${Math.round(next.x)}, ${Math.round(next.y)}`,
+            ),
+          ],
+        };
+      });
+
+    case "trace-remove":
+      return withActivity(state, action.id, (a) => {
+        const trace = a.trace ?? [];
+        const prev = trace.find((p) => p.id === action.placementId);
+        if (!prev) return a;
+        const afterApproval = a.status === "approved" || a.status === "active" || a.status === "paused";
+        return {
+          ...a,
+          trace: trace.filter((p) => p.id !== action.placementId),
+          audit: [...a.audit, audit(afterApproval ? "Trace changed after approval" : "Template removed from trace", prev.label)],
         };
       });
 

@@ -7,6 +7,7 @@ Versioning: major = visual identity changes · minor = new sections/assets · pa
 
 ### Added
 - **TACEDGE | Field Firing prototype** (branch work, not part of the brand system release): a fourth Vite entry (`field-firing.html`, `src/field-firing/`) demonstrating the All Arms Field Firing Safety planning workflow on the brand tokens — Activities, Create Activity, Activity Overview, Configure and Safety Plan, with a deterministic rules/workflow domain layer, audit trail and localStorage persistence. Demo data only; every requirement is marked SOURCE REQUIRED. Plan: `docs/field-firing/product-plan.md`.
+- Field Firing **Trace builder**: drag-and-drop weapon templates onto a fictional range sketch to develop the firing trace (move, rotate, remove; placements audited and stored on the activity). Template geometry is deterministic and parameterised (`src/field-firing/domain/trace.ts`, unit-tested); all shapes are unitless placeholders labelled SOURCE REQUIRED — no weapon danger area dimensions are invented and no danger areas are calculated.
 - `npm run test:field-firing` (Node test runner over the deterministic rules), now part of `npm test`.
 - `src/styles/fonts.css`: shared @font-face declarations extracted from `global.css` (unchanged rules) so the site and the prototype load the same self-hosted fonts.
 

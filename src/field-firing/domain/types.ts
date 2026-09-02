@@ -80,6 +80,8 @@ export interface RequirementDef {
   /** Critical requirements block submission for review while outstanding. */
   critical: boolean;
   source: DoctrineRef;
+  /** Optional in-app view that supports answering this requirement. */
+  relatedView?: "trace";
 }
 
 /**
@@ -132,6 +134,8 @@ export interface Activity {
   config: ActivityConfig;
   appointments: Appointment[];
   responses: Record<string, RequirementResponse>;
+  /** Weapon templates placed on the range trace. Absent on older stored data. */
+  trace?: TracePlacement[];
   audit: AuditEvent[];
   createdAt: string;
   /** Catalogue version the plan was built against (change control, §23). */
@@ -150,4 +154,20 @@ export interface WeaponSystem {
   name: string;
   /** Demo data only. Safety distances are never invented. */
   demo: boolean;
+}
+
+/**
+ * One weapon template placed on the activity trace.
+ * Coordinates and rotation are in map units on the demo range sketch;
+ * the template's shape comes from its TraceTemplateDef (see trace.ts).
+ */
+export interface TracePlacement {
+  id: string;
+  templateId: string;
+  /** Firing point position, map units. */
+  x: number;
+  y: number;
+  /** Direction of fire, degrees clockwise from map north (up). */
+  rotationDeg: number;
+  label: string;
 }

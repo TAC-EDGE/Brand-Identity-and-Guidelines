@@ -89,11 +89,12 @@ export const catalogue: RequirementDef[] = [
     section: "range",
     title: "Danger area established",
     requirement: "The applicable danger area / template for the activity is established and recorded. Dimensions: SOURCE REQUIRED.",
-    guidance: "The application does not calculate danger areas. Values come from authoritative templates once supplied, and remain subject to RCO verification.",
+    guidance: "Develop the trace on the Trace tab by placing weapon templates on the range sketch. The application does not calculate danger areas. Values come from authoritative templates once supplied, and remain subject to RCO verification.",
     input: "confirm",
     appliesWhen: [],
     critical: true,
     source: SOURCE_REQUIRED,
+    relatedView: "trace",
   },
   {
     id: "req-sentries",

@@ -164,7 +164,10 @@ export default function ActivityOverview({ id }: { id: string }) {
 
             <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
               <a className="btn btn--secondary btn--sm" href={planHref}>Open safety plan</a>
-              <a className="btn btn--ghost btn--sm" href={`#/activity/${activity.id}/configure`}>Configure activity</a>
+              <a className="btn btn--ghost btn--sm" href={`#/activity/${activity.id}/trace`}>
+                Trace{(activity.trace?.length ?? 0) > 0 ? ` · ${activity.trace!.length} placed` : ""}
+              </a>
+              <a className="btn btn--ghost btn--sm" href={`#/activity/${activity.id}/configure`}>Configure</a>
             </div>
           </section>
 

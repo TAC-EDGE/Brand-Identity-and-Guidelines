@@ -9,19 +9,20 @@ import CreateActivity from "./screens/CreateActivity";
 import ActivityOverview from "./screens/ActivityOverview";
 import ConfigureActivity from "./screens/ConfigureActivity";
 import SafetyPlan from "./screens/SafetyPlan";
+import Trace from "./screens/Trace";
 import Planned from "./screens/Planned";
 
 export type Route =
   | { name: "activities" }
   | { name: "create" }
-  | { name: "activity"; id: string; tab: "overview" | "configure" | "safety-plan" }
+  | { name: "activity"; id: string; tab: "overview" | "configure" | "trace" | "safety-plan" }
   | { name: "planned"; area: "doctrine" | "templates" | "admin" };
 
 export function parseRoute(hash: string): Route {
   const parts = hash.replace(/^#\/?/, "").split("/").filter(Boolean);
   if (parts[0] === "activities" && parts[1] === "new") return { name: "create" };
   if (parts[0] === "activity" && parts[1]) {
-    const tab = parts[2] === "configure" || parts[2] === "safety-plan" ? parts[2] : "overview";
+    const tab = parts[2] === "configure" || parts[2] === "trace" || parts[2] === "safety-plan" ? parts[2] : "overview";
     return { name: "activity", id: parts[1], tab };
   }
   if (parts[0] === "doctrine" || parts[0] === "templates" || parts[0] === "admin") {
@@ -96,6 +97,7 @@ function Shell({ route }: { route: Route }) {
             {route.name === "create" && <CreateActivity />}
             {route.name === "activity" && route.tab === "overview" && <ActivityOverview id={route.id} />}
             {route.name === "activity" && route.tab === "configure" && <ConfigureActivity id={route.id} />}
+            {route.name === "activity" && route.tab === "trace" && <Trace id={route.id} />}
             {route.name === "activity" && route.tab === "safety-plan" && <SafetyPlan id={route.id} />}
             {route.name === "planned" && <Planned area={route.area} />}
           </div>

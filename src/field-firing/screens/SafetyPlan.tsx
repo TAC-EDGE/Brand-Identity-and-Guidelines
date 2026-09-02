@@ -48,6 +48,13 @@ function RequirementItem({
         <div className="ff-req__body" id={bodyId}>
           <p className="ff-req__requirement">{def.requirement}</p>
           {def.guidance && <p className="ff-req__guidance">{def.guidance}</p>}
+          {def.relatedView === "trace" && (
+            <p>
+              <a className="btn btn--secondary btn--sm" href={`#/activity/${activityId}/trace`}>
+                Open trace{(activity.trace?.length ?? 0) > 0 ? ` (${activity.trace!.length} placed)` : ""}
+              </a>
+            </p>
+          )}
 
           {needsText && (
             <div className="ff-field">

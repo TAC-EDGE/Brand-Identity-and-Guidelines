@@ -96,6 +96,12 @@ for them without rework.
 
 1. **Done — vertical slice**: Activities → Create → Overview → Configure → Safety Plan,
    lifecycle with gated transitions, explicit approval, audit trail, rule tests.
+   Plus the **Trace builder**: drag weapon templates onto a fictional range sketch
+   to develop the firing trace — deterministic parameterised geometry
+   (`domain/trace.ts`, tested), placements recorded on the activity with audit
+   events, templates drawn from the configured weapon systems, everything labelled
+   demo/SOURCE REQUIRED because no WDA dimensions have been supplied. It records
+   positions and directions; it does not calculate danger areas.
 2. People & Appointments screen; Review screen (consolidated exception-based readiness).
 3. Brief generation from validated plan data; Activity Record + full audit view.
 4. Conduct Mode (high-contrast, large targets, pause/resume, activity log) and

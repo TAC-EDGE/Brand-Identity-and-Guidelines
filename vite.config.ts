@@ -52,6 +52,7 @@ export default defineConfig({
         main: resolve(root, "index.html"),
         print: resolve(root, "print.html"),
         "style-tile": resolve(root, "style-tile.html"),
+        "field-firing": resolve(root, "field-firing.html"),
       },
     },
   },

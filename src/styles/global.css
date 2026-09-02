@@ -4,18 +4,7 @@
    ============================================================ */
 
 @import "../../tokens/tokens.css";
-
-/* Brand fonts — self-hosted solely to render this site (SIL OFL 1.1).
-   Not download assets; see docs/governance.md. */
-@font-face { font-family: "Play"; src: url("../fonts/play-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Play"; src: url("../fonts/play-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
-@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
-@font-face { font-family: "Be Vietnam Pro"; src: url("../fonts/be-vietnam-pro-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
-@font-face { font-family: "JetBrains Mono"; src: url("../fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "JetBrains Mono"; src: url("../fonts/jetbrains-mono-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "JetBrains Mono"; src: url("../fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@import "./fonts.css";
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }

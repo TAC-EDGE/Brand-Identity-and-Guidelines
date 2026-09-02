@@ -3,6 +3,13 @@
 All notable changes to the TACEDGE brand system are recorded here.
 Versioning: major = visual identity changes · minor = new sections/assets · patch = corrections.
 
+## [Unreleased]
+
+### Added
+- **TACEDGE | Field Firing prototype** (branch work, not part of the brand system release): a fourth Vite entry (`field-firing.html`, `src/field-firing/`) demonstrating the All Arms Field Firing Safety planning workflow on the brand tokens — Activities, Create Activity, Activity Overview, Configure and Safety Plan, with a deterministic rules/workflow domain layer, audit trail and localStorage persistence. Demo data only; every requirement is marked SOURCE REQUIRED. Plan: `docs/field-firing/product-plan.md`.
+- `npm run test:field-firing` (Node test runner over the deterministic rules), now part of `npm test`.
+- `src/styles/fonts.css`: shared @font-face declarations extracted from `global.css` (unchanged rules) so the site and the prototype load the same self-hosted fonts.
+
 ## [1.1.0] — 2026-07-15
 
 Brand & Design System: adds the template system to the v1.0 identity release.

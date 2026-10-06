@@ -17,6 +17,8 @@ The SVG files are the master logo assets. Never redraw, trace, approximate or re
 | `logos/monochrome/tacedge-wordmark-ink.svg` | SVG | Monochrome wordmark | Light | approved | Website `public/brand` |
 | `logos/app-icon/tacedge-app-icon.svg` | SVG | App icon / favicon master (rounded-square tile) | Any | provisional (tile green, D1) | Website `public/brand/favicon.svg` |
 | `logos/app-icon/icon-192.png`, `icon-512.png`, `apple-touch-icon.png` | PNG | Web manifest and home-screen icons | Any | derived | Website `public/brand` |
+| `logos/social/tacedge-avatar-forest.svg` | SVG | Social and messaging avatar (WhatsApp, LinkedIn, Teams): brandmark centred on primary dark, sized for a circular crop | Any (square, cropped round by the platform) | provisional (D1: chosen by the founders 6 Oct 2026; primary dark, not logo-forest) | This repository |
+| `logos/social/tacedge-avatar-forest-1024.png` | PNG | Upload-ready 1024 × 1024 avatar | Any | derived | Rendered from the SVG above |
 | `logos/png/*.png` | PNG | Raster exports for Office documents, signatures, suppliers without SVG support | As per source | derived | `npm run export:logo-pngs` |
 
 ## Icons

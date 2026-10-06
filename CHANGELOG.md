@@ -3,6 +3,11 @@
 All notable changes to the TACEDGE brand system are recorded here.
 Versioning: major = visual identity changes · minor = new sections/assets · patch = corrections.
 
+## [Unreleased]
+
+### Added
+- **Social avatar** (`assets/logos/social/`): the brandmark centred on primary dark green `#112411`, sized to survive the circular crop messaging apps apply, with an upload-ready 1024 px PNG. Chosen by the founders on 6 October 2026 from four options; provisional under D1 because it inks the field in primary dark rather than logo-forest. Replaces the sage tile previously used as the WhatsApp group icon, whose corners the crop cut off.
+
 ## [1.1.0] — 2026-07-15
 
 Brand & Design System: adds the template system to the v1.0 identity release.

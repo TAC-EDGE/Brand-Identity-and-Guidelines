@@ -10,7 +10,7 @@ The connected `tacedge/website` and Geotech V2 prototype repositories are **read
 
 ## Hard brand rules (never break these)
 
-1. **TACEDGE is always uppercase** in written use. Never TacEdge, Tacedge, TechEdge or Tech Edge. Legal name: TACEDGE Limited where required.
+1. **In running text the brand is written TAC-EDGE** (uppercase, hyphenated), per Mike Coom, 13 October 2026. The registered entity keeps its Companies Office spelling, TACEDGE Limited, and that form is used only where the legal name is required: parties clauses, identity lines, execution blocks, footers. Logo artwork and existing document titles keep their own spelling. Never TacEdge, Tacedge, TechEdge or Tech Edge.
 2. **Approved logo assets must never be redrawn**, traced, approximated, regenerated, recoloured or rebuilt with text/CSS. The SVGs in `assets/logos/` are the masters; the brandmark's softened geometry is part of the mark. PNG derivatives are regenerated with `npm run export:logo-pngs`, never edited.
 3. **"Shared Clarity." is the brand promise** — full stop included in hero treatments. Category line: "For ground-engineering delivery."
 4. **#112411 is the primary dark green** (Primary Dark / forest). #2B4721 is `logo-forest`, an artwork-only colour inside logo files, provisional under decision D1. Do not add colours; the palette in `tokens/colors.json` is closed.

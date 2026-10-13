@@ -5,6 +5,8 @@ Versioning: major = visual identity changes · minor = new sections/assets · pa
 
 ## [Unreleased]
 
+- Naming rule recorded in CLAUDE.md: TAC-EDGE in running text; TACEDGE Limited only as the registered entity name.
+
 ### Added
 - **Social avatar** (`assets/logos/social/`): the brandmark centred on primary dark green `#112411`, sized to survive the circular crop messaging apps apply, with an upload-ready 1024 px PNG. Chosen by the founders on 6 October 2026 from four options; provisional under D1 because it inks the field in primary dark rather than logo-forest. Replaces the sage tile previously used as the WhatsApp group icon, whose corners the crop cut off.
 
